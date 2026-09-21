@@ -1,4 +1,5 @@
 # Compiled from po/*.po
+/turtle_docstringdict_*.py
 /turtle_translations/*.py
 !/turtle_translations/__init__.py
 

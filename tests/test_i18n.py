@@ -57,6 +57,34 @@ class CatalogTests(unittest.TestCase):
             "turtle.Turtle.left (Python 3.13)",
         ])
 
+    def test_newest_docstrings_precede_older_variants(self):
+        data = {
+            "versions": {version: {"group": version}
+                         for version in ("3.10", "3.9", "3.11")},
+            "groups": {
+                "3.9": {"Turtle.left": "Oldest", "Turtle.right": "Shared"},
+                "3.10": {"Turtle.left": "Older", "Turtle.right": "Shared",
+                         "Turtle.removed": "Removed"},
+                "3.11": {"Turtle.left": "Newest", "Turtle.right": "Shared"},
+            },
+        }
+        template = i18n.build_template(data)
+        expected = ["Newest", "Shared", "Older", "Removed", "Oldest"]
+        self.assertEqual([message.id for message in template if message.id], expected)
+        self.assertEqual(template.version, "3.9–3.11")
+
+        catalog = i18n.Catalog(locale="pl")
+        for original in reversed(expected):
+            catalog.add(original, string=f"Translation: {original}")
+        catalog.update(template)
+        path = self.root / "pl.po"
+        i18n.write_catalog(catalog, path)
+        messages = [message for message in i18n.read_catalog(path) if message.id]
+        self.assertEqual([message.id for message in messages], expected)
+        for message in messages:
+            self.assertEqual(message.string, f"Translation: {message.id}")
+            self.assertFalse(message.fuzzy)
+
     def test_matching_requires_original_and_reviewed_translation(self):
         catalog = i18n.build_template(self.data)
         for message in catalog:

@@ -32,7 +32,7 @@ def _version_ranges(versions):
 def build_template(data=None):
     if data is None:
         data = read_sources()
-    versions = list(data["versions"])
+    versions = sorted(data["versions"], key=lambda version: tuple(map(int, version.split("."))))
     catalog = Catalog(
         project=PROJECT,
         version=f"{versions[0]}–{versions[-1]}",
@@ -45,7 +45,8 @@ def build_template(data=None):
         ),
     )
     uses = {}
-    for version, info in data["versions"].items():
+    for version in reversed(versions):
+        info = data["versions"][version]
         for key, doc in data["groups"][info["group"]].items():
             uses.setdefault(doc, {}).setdefault(key, []).append(version)
     for doc, methods in uses.items():

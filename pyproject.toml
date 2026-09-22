@@ -43,5 +43,9 @@ build.targets.sdist.include = [
   "/turtle_translations/__init__.py",
 ]
 
+[tool.check-wheel-contents]
+# turtle imports the root shim; version-specific dictionaries live in the package.
+toplevel = [ "turtle_docstringdict_pl.py", "turtle_translations" ]
+
 [tool.pyproject-fmt]
 max_supported_python = "3.16"

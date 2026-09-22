@@ -41,6 +41,10 @@ Created: po/ga.po
 
 You can now translate it with your tool of choice.
 
+Add `turtle_docstringdict_<lang>.py` (with a lowercase language code) to
+`tool.check-wheel-contents.toplevel` in `pyproject.toml` so package inspection
+expects the new language's generated shim.
+
 ### Updating the catalogs
 
 After refreshing the source mappings and template, merge the changes

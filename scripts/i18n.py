@@ -3,6 +3,7 @@
 import argparse
 from datetime import datetime, timezone
 from io import BytesIO
+from itertools import groupby
 from pathlib import Path
 
 from babel.messages.catalog import Catalog
@@ -15,6 +16,17 @@ PO_DIR = ROOT / "po"
 POT = PO_DIR / "turtle.pot"
 PROJECT = "turtle-translations"
 BUGS_ADDRESS = "https://github.com/python/turtle-translations/issues"
+
+
+def _version_ranges(versions):
+    versions = sorted(tuple(map(int, version.split("."))) for version in versions)
+    ranges = []
+    for _, group in groupby(enumerate(versions),
+                            key=lambda item: (item[1][0], item[1][1] - item[0])):
+        members = [version for _, version in group]
+        first, last = (".".join(map(str, version)) for version in (members[0], members[-1]))
+        ranges.append(first if first == last else f"{first}–{last}")
+    return ", ".join(ranges)
 
 
 def build_template(data=None):
@@ -32,9 +44,15 @@ def build_template(data=None):
             "# This file was generated via 'scripts/i18n.py extract'."
         ),
     )
+    uses = {}
     for version, info in data["versions"].items():
         for key, doc in data["groups"][info["group"]].items():
-            catalog.add(doc, auto_comments=[f"turtle.{key}", f"Python {version}: turtle.{key}"])
+            uses.setdefault(doc, {}).setdefault(key, []).append(version)
+    for doc, methods in uses.items():
+        catalog.add(doc, auto_comments=[
+            f"turtle.{key} (Python {_version_ranges(versions)})"
+            for key, versions in methods.items()
+        ])
     return catalog
 
 
@@ -97,8 +115,7 @@ def _load_docsdict(path, docs):
     result = {}
     for key, original in docs.items():
         message = catalog.get(original)
-        if (message is not None and message.string and not message.fuzzy
-                and f"turtle.{key}" in message.auto_comments):
+        if message is not None and message.string and not message.fuzzy:
             result[key] = message.string
     return result
 

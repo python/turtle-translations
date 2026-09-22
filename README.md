@@ -72,8 +72,8 @@ pl            0/118 translated (0%), 0 fuzzy
 Each PO file compiles to a top-level `turtle_docstringdict_<lang>.py` shim and
 internal version-specific dictionaries under
 `turtle_translations/<lang>/py3<minor><patch>.py`. The shim exports `docsdict`,
-which is what `turtle` loads. Compilation matches both the method name and its
-English source text, omitting untranslated and fuzzy entries so their help stays English.
+which is what `turtle` loads. Compilation matches each method's English source
+text, omitting untranslated and fuzzy entries so their help stays English.
 One PO entry can serve multiple methods and versions; extracted comments identify
 each use. All English variants remain in the shared catalog.
 

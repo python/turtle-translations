@@ -33,11 +33,31 @@ class CatalogTests(unittest.TestCase):
             for key, original in self.data["groups"][info["group"]].items():
                 originals.add(original)
                 message = catalog.get(original)
-                self.assertIn(f"turtle.{key}", message.auto_comments)
-                self.assertIn(f"Python {version}: turtle.{key}", message.auto_comments)
+                self.assertTrue(any(comment.startswith(f"turtle.{key} (Python ")
+                                    for comment in message.auto_comments))
         self.assertEqual(len(catalog), len(originals))
 
-    def test_matching_requires_original_and_method_and_reviewed_translation(self):
+    def test_comments_group_versions_per_method_without_filling_gaps(self):
+        data = {
+            "versions": {version: {"group": version}
+                         for version in ("3.11", "3.12", "3.13", "3.14")},
+            "groups": {
+                "3.11": {"Turtle.left": "Shared", "Turtle.right": "Shared"},
+                "3.12": {"Turtle.left": "Shared"},
+                "3.13": {"Turtle.left": "Changed"},
+                "3.14": {"Turtle.left": "Shared"},
+            },
+        }
+        catalog = i18n.build_template(data)
+        self.assertEqual(catalog.get("Shared").auto_comments, [
+            "turtle.Turtle.left (Python 3.11–3.12, 3.14)",
+            "turtle.Turtle.right (Python 3.11)",
+        ])
+        self.assertEqual(catalog.get("Changed").auto_comments, [
+            "turtle.Turtle.left (Python 3.13)",
+        ])
+
+    def test_matching_requires_original_and_reviewed_translation(self):
         catalog = i18n.build_template(self.data)
         for message in catalog:
             if message.id:
@@ -46,11 +66,14 @@ class CatalogTests(unittest.TestCase):
         catalog.get(docs["Turtle.forward"]).flags.add("fuzzy")
         catalog.get(docs["Turtle.back"]).string = ""
         catalog.get(docs["Turtle.left"]).auto_comments = ["turtle.WrongMethod"]
+        catalog.get(docs["Turtle.right"]).auto_comments = []
         path = self.root / "pl.po"
         i18n.write_catalog(catalog, path)
         compiled = i18n._load_docsdict(path, docs)
-        for key in ("Turtle.forward", "Turtle.back", "Turtle.left"):
+        for key in ("Turtle.forward", "Turtle.back"):
             self.assertNotIn(key, compiled)
+        for key in ("Turtle.left", "Turtle.right"):
+            self.assertEqual(compiled[key], f"Translation: {docs[key]}")
         self.assertIn("Turtle.settiltangle", compiled)
         self.assertNotIn("Turtle.teleport", compiled)
         self.assertEqual(compiled["Turtle.tiltangle"], f"Translation: {docs['Turtle.tiltangle']}")

@@ -40,7 +40,7 @@ class PackageTests(unittest.TestCase):
                 names = archive.namelist()
                 self.assertIn("turtle_docstringdict_pl.py", names)
                 self.assertNotIn("turtle_translations/pl.py", names)
-                for group in (310, 311, 312, 313, 314):
+                for group in (311, 312, 313, 314):
                     self.assertIn(f"turtle_translations/pl/py{group}.py", names)
             runtime = root / "runtime"
             runtime.mkdir()

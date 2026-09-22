@@ -13,14 +13,13 @@ import sources
 class SourceTests(unittest.TestCase):
     def test_recorded_version_differences(self):
         data = sources.read_sources()
-        self.assertEqual(list(data["versions"]), [f"3.{n}" for n in range(10, 17)])
+        self.assertEqual(list(data["versions"]), [f"3.{n}" for n in range(11, 17)])
         self.assertEqual([len(docs) for docs in data["groups"].values()],
-                         [102, 102, 103, 102, 106])
+                         [102, 103, 102, 106])
         for minor in (14, 15, 16):
             self.assertEqual(data["versions"][f"3.{minor}"]["group"], "3.14")
         groups = data["groups"]
         for old, new, added, removed, changed in (
-            ("3.10", "3.11", 0, 0, 3),
             ("3.11", "3.12", 1, 0, 3),
             ("3.12", "3.13", 0, 1, 9),
             ("3.13", "3.14", 4, 0, 2),

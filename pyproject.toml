@@ -9,14 +9,13 @@ description = "Docstring translations for the Python turtle module"
 readme = "README.md"
 license = "PSF-2.0"
 authors = [ { name = "Stan Ulbrych", email = "stan@python.org" } ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Education",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",

@@ -12,7 +12,6 @@ caused solely by compiler indentation cleanup in newer Python versions.
 
 | Python | Ref | Commit | Names | Dictionary group |
 | --- | --- | --- | ---: | --- |
-| 3.10 | `upstream/3.10` | `22344e9d4ba2a966ca17c9a1ca78c4c1defc3f09` | 102 | 3.10 |
 | 3.11 | `upstream/3.11` | `9eaf48a56547872b86de5cecbaa7edd3279159ed` | 102 | 3.11 |
 | 3.12 | `upstream/3.12` | `c016c2535b74227fddf2cf7334dbfead6c930214` | 103 | 3.12 |
 | 3.13 | `upstream/3.13` | `02d44063960107556b73248b195bb4886ff42b59` | 102 | 3.13 |
@@ -20,13 +19,9 @@ caused solely by compiler indentation cleanup in newer Python versions.
 | 3.15 | `upstream/3.15` | `3654c0d12f71b432a287ddf93b9494c170029c6f` | 106 | 3.14 |
 | 3.16 | `upstream/main` | `e9ae46f02b073d52f277152f5e22128525a9e3f7` | 106 | 3.14 |
 
-## Python 3.10
-
-Baseline.
-
 ## Python 3.11
 
-- Changed: `Turtle.settiltangle`, `Turtle.tiltangle`, `write_docstringdict`.
+Baseline.
 
 ## Python 3.12
 

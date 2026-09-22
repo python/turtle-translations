@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "sources" / "turtle.json"
 REPORT = ROOT / "sources" / "README.md"
 REFS = {f"3.{minor}": f"upstream/{'main' if minor == 16 else f'3.{minor}'}"
-        for minor in range(10, 17)}
+        for minor in range(11, 17)}
 
 
 def normalize_docstring(doc):

@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: turtle-translations 3.10–3.16\n"
+"Project-Id-Version: turtle-translations 3.11–3.16\n"
 "Report-Msgid-Bugs-To: https://github.com/python/turtle-translations/issues\n"
-"POT-Creation-Date: 2026-09-22 00:50+0200\n"
-"PO-Revision-Date: 2026-09-21 22:50+0000\n"
+"POT-Creation-Date: 2026-09-22 09:19+0200\n"
+"PO-Revision-Date: 2026-09-22 07:19+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pl\n"
 "Language-Team: pl <LL@li.org>\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 
 #. turtle.RawTurtle
-#. Python 3.10: turtle.RawTurtle
 #. Python 3.11: turtle.RawTurtle
 #. Python 3.12: turtle.RawTurtle
 #. Python 3.13: turtle.RawTurtle
@@ -33,7 +32,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Screen
-#. Python 3.10: turtle.Screen
 #. Python 3.11: turtle.Screen
 #. Python 3.12: turtle.Screen
 #. Python 3.13: turtle.Screen
@@ -47,7 +45,6 @@ msgid ""
 msgstr ""
 
 #. turtle.ScrolledCanvas
-#. Python 3.10: turtle.ScrolledCanvas
 #. Python 3.11: turtle.ScrolledCanvas
 #. Python 3.12: turtle.ScrolledCanvas
 #. Python 3.13: turtle.ScrolledCanvas
@@ -62,7 +59,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Shape
-#. Python 3.10: turtle.Shape
 #. Python 3.11: turtle.Shape
 #. Python 3.12: turtle.Shape
 #. Python 3.13: turtle.Shape
@@ -78,7 +74,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Terminator
-#. Python 3.10: turtle.Terminator
 #. Python 3.11: turtle.Terminator
 #. Python 3.12: turtle.Terminator
 #. Python 3.13: turtle.Terminator
@@ -93,7 +88,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle
-#. Python 3.10: turtle.Turtle
 #. Python 3.11: turtle.Turtle
 #. Python 3.12: turtle.Turtle
 #. Python 3.13: turtle.Turtle
@@ -108,7 +102,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.back
-#. Python 3.10: turtle.Turtle.back
 #. Python 3.11: turtle.Turtle.back
 #. Python 3.12: turtle.Turtle.back
 msgid ""
@@ -131,7 +124,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.begin_fill
-#. Python 3.10: turtle.Turtle.begin_fill
 #. Python 3.11: turtle.Turtle.begin_fill
 #. Python 3.12: turtle.Turtle.begin_fill
 #. Python 3.13: turtle.Turtle.begin_fill
@@ -151,7 +143,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.begin_poly
-#. Python 3.10: turtle.Turtle.begin_poly
 #. Python 3.11: turtle.Turtle.begin_poly
 #. Python 3.12: turtle.Turtle.begin_poly
 #. Python 3.13: turtle.Turtle.begin_poly
@@ -171,7 +162,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.circle
-#. Python 3.10: turtle.Turtle.circle
 #. Python 3.11: turtle.Turtle.circle
 #. Python 3.12: turtle.Turtle.circle
 #. Python 3.13: turtle.Turtle.circle
@@ -210,7 +200,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.clear
-#. Python 3.10: turtle.Turtle.clear
 #. Python 3.11: turtle.Turtle.clear
 #. Python 3.12: turtle.Turtle.clear
 #. Python 3.13: turtle.Turtle.clear
@@ -231,7 +220,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.clearstamp
-#. Python 3.10: turtle.Turtle.clearstamp
 #. Python 3.11: turtle.Turtle.clearstamp
 #. Python 3.12: turtle.Turtle.clearstamp
 #. Python 3.13: turtle.Turtle.clearstamp
@@ -252,7 +240,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.clearstamps
-#. Python 3.10: turtle.Turtle.clearstamps
 #. Python 3.11: turtle.Turtle.clearstamps
 #. Python 3.12: turtle.Turtle.clearstamps
 #. Python 3.13: turtle.Turtle.clearstamps
@@ -279,7 +266,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.clone
-#. Python 3.10: turtle.Turtle.clone
 #. Python 3.11: turtle.Turtle.clone
 #. Python 3.12: turtle.Turtle.clone
 #. Python 3.13: turtle.Turtle.clone
@@ -300,7 +286,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.color
-#. Python 3.10: turtle.Turtle.color
 #. Python 3.11: turtle.Turtle.color
 #. Python 3.12: turtle.Turtle.color
 msgid ""
@@ -337,7 +322,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.degrees
-#. Python 3.10: turtle.Turtle.degrees
 #. Python 3.11: turtle.Turtle.degrees
 #. Python 3.12: turtle.Turtle.degrees
 #. Python 3.13: turtle.Turtle.degrees
@@ -368,7 +352,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.distance
-#. Python 3.10: turtle.Turtle.distance
 #. Python 3.11: turtle.Turtle.distance
 #. Python 3.12: turtle.Turtle.distance
 msgid ""
@@ -395,7 +378,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.dot
-#. Python 3.10: turtle.Turtle.dot
 #. Python 3.11: turtle.Turtle.dot
 #. Python 3.12: turtle.Turtle.dot
 #. Python 3.13: turtle.Turtle.dot
@@ -418,10 +400,8 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.down
-#. Python 3.10: turtle.Turtle.down
-#. turtle.Turtle.pendown
-#. Python 3.10: turtle.Turtle.pendown
 #. Python 3.11: turtle.Turtle.down
+#. turtle.Turtle.pendown
 #. Python 3.11: turtle.Turtle.pendown
 #. Python 3.12: turtle.Turtle.down
 #. Python 3.12: turtle.Turtle.pendown
@@ -445,7 +425,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.end_fill
-#. Python 3.10: turtle.Turtle.end_fill
 #. Python 3.11: turtle.Turtle.end_fill
 #. Python 3.12: turtle.Turtle.end_fill
 #. Python 3.13: turtle.Turtle.end_fill
@@ -465,7 +444,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.end_poly
-#. Python 3.10: turtle.Turtle.end_poly
 #. Python 3.11: turtle.Turtle.end_poly
 #. Python 3.12: turtle.Turtle.end_poly
 #. Python 3.13: turtle.Turtle.end_poly
@@ -485,7 +463,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.fillcolor
-#. Python 3.10: turtle.Turtle.fillcolor
 #. Python 3.11: turtle.Turtle.fillcolor
 #. Python 3.12: turtle.Turtle.fillcolor
 msgid ""
@@ -518,7 +495,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.filling
-#. Python 3.10: turtle.Turtle.filling
 #. Python 3.11: turtle.Turtle.filling
 #. Python 3.12: turtle.Turtle.filling
 #. Python 3.13: turtle.Turtle.filling
@@ -539,7 +515,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.forward
-#. Python 3.10: turtle.Turtle.forward
 #. Python 3.11: turtle.Turtle.forward
 #. Python 3.12: turtle.Turtle.forward
 msgid ""
@@ -565,7 +540,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.get_poly
-#. Python 3.10: turtle.Turtle.get_poly
 #. Python 3.11: turtle.Turtle.get_poly
 #. Python 3.12: turtle.Turtle.get_poly
 #. Python 3.13: turtle.Turtle.get_poly
@@ -583,7 +557,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.get_shapepoly
-#. Python 3.10: turtle.Turtle.get_shapepoly
 #. Python 3.11: turtle.Turtle.get_shapepoly
 #. Python 3.12: turtle.Turtle.get_shapepoly
 #. Python 3.13: turtle.Turtle.get_shapepoly
@@ -604,10 +577,8 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.getpen
-#. Python 3.10: turtle.Turtle.getpen
-#. turtle.Turtle.getturtle
-#. Python 3.10: turtle.Turtle.getturtle
 #. Python 3.11: turtle.Turtle.getpen
+#. turtle.Turtle.getturtle
 #. Python 3.11: turtle.Turtle.getturtle
 #. Python 3.12: turtle.Turtle.getpen
 #. Python 3.12: turtle.Turtle.getturtle
@@ -636,7 +607,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.getscreen
-#. Python 3.10: turtle.Turtle.getscreen
 #. Python 3.11: turtle.Turtle.getscreen
 #. Python 3.12: turtle.Turtle.getscreen
 #. Python 3.13: turtle.Turtle.getscreen
@@ -659,7 +629,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.goto
-#. Python 3.10: turtle.Turtle.goto
 #. Python 3.11: turtle.Turtle.goto
 #. Python 3.12: turtle.Turtle.goto
 msgid ""
@@ -694,7 +663,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.heading
-#. Python 3.10: turtle.Turtle.heading
 #. Python 3.11: turtle.Turtle.heading
 #. Python 3.12: turtle.Turtle.heading
 #. Python 3.13: turtle.Turtle.heading
@@ -713,7 +681,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.hideturtle
-#. Python 3.10: turtle.Turtle.hideturtle
 #. Python 3.11: turtle.Turtle.hideturtle
 #. Python 3.12: turtle.Turtle.hideturtle
 #. Python 3.13: turtle.Turtle.hideturtle
@@ -736,7 +703,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.home
-#. Python 3.10: turtle.Turtle.home
 #. Python 3.11: turtle.Turtle.home
 #. Python 3.12: turtle.Turtle.home
 #. Python 3.13: turtle.Turtle.home
@@ -756,7 +722,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.isdown
-#. Python 3.10: turtle.Turtle.isdown
 #. Python 3.11: turtle.Turtle.isdown
 #. Python 3.12: turtle.Turtle.isdown
 #. Python 3.13: turtle.Turtle.isdown
@@ -778,7 +743,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.isvisible
-#. Python 3.10: turtle.Turtle.isvisible
 #. Python 3.11: turtle.Turtle.isvisible
 msgid ""
 "Return True if the Turtle is shown, False if it's hidden.\n"
@@ -792,7 +756,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.left
-#. Python 3.10: turtle.Turtle.left
 #. Python 3.11: turtle.Turtle.left
 #. Python 3.12: turtle.Turtle.left
 #. Python 3.13: turtle.Turtle.left
@@ -820,7 +783,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.onclick
-#. Python 3.10: turtle.Turtle.onclick
 #. Python 3.11: turtle.Turtle.onclick
 #. Python 3.12: turtle.Turtle.onclick
 #. Python 3.13: turtle.Turtle.onclick
@@ -847,7 +809,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.ondrag
-#. Python 3.10: turtle.Turtle.ondrag
 #. Python 3.11: turtle.Turtle.ondrag
 #. Python 3.12: turtle.Turtle.ondrag
 #. Python 3.13: turtle.Turtle.ondrag
@@ -874,7 +835,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.onrelease
-#. Python 3.10: turtle.Turtle.onrelease
 #. Python 3.11: turtle.Turtle.onrelease
 #. Python 3.12: turtle.Turtle.onrelease
 #. Python 3.13: turtle.Turtle.onrelease
@@ -905,7 +865,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.pen
-#. Python 3.10: turtle.Turtle.pen
 #. Python 3.11: turtle.Turtle.pen
 #. Python 3.12: turtle.Turtle.pen
 #. Python 3.13: turtle.Turtle.pen
@@ -962,7 +921,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.pencolor
-#. Python 3.10: turtle.Turtle.pencolor
 #. Python 3.11: turtle.Turtle.pencolor
 #. Python 3.12: turtle.Turtle.pencolor
 msgid ""
@@ -996,7 +954,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.pensize
-#. Python 3.10: turtle.Turtle.pensize
 #. Python 3.11: turtle.Turtle.pensize
 #. Python 3.12: turtle.Turtle.pensize
 #. Python 3.13: turtle.Turtle.pensize
@@ -1023,7 +980,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.penup
-#. Python 3.10: turtle.Turtle.penup
 #. Python 3.11: turtle.Turtle.penup
 #. Python 3.12: turtle.Turtle.penup
 #. Python 3.13: turtle.Turtle.penup
@@ -1042,7 +998,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.position
-#. Python 3.10: turtle.Turtle.position
 #. Python 3.11: turtle.Turtle.position
 #. Python 3.12: turtle.Turtle.position
 #. Python 3.13: turtle.Turtle.position
@@ -1062,7 +1017,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.radians
-#. Python 3.10: turtle.Turtle.radians
 #. Python 3.11: turtle.Turtle.radians
 #. Python 3.12: turtle.Turtle.radians
 #. Python 3.13: turtle.Turtle.radians
@@ -1083,7 +1037,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.reset
-#. Python 3.10: turtle.Turtle.reset
 #. Python 3.11: turtle.Turtle.reset
 #. Python 3.12: turtle.Turtle.reset
 #. Python 3.13: turtle.Turtle.reset
@@ -1111,7 +1064,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.resizemode
-#. Python 3.10: turtle.Turtle.resizemode
 #. Python 3.11: turtle.Turtle.resizemode
 #. Python 3.12: turtle.Turtle.resizemode
 #. Python 3.13: turtle.Turtle.resizemode
@@ -1142,7 +1094,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.right
-#. Python 3.10: turtle.Turtle.right
 #. Python 3.11: turtle.Turtle.right
 #. Python 3.12: turtle.Turtle.right
 #. Python 3.13: turtle.Turtle.right
@@ -1170,7 +1121,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.setheading
-#. Python 3.10: turtle.Turtle.setheading
 #. Python 3.11: turtle.Turtle.setheading
 #. Python 3.12: turtle.Turtle.setheading
 #. Python 3.13: turtle.Turtle.setheading
@@ -1202,7 +1152,8 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.settiltangle
-#. Python 3.10: turtle.Turtle.settiltangle
+#. Python 3.11: turtle.Turtle.settiltangle
+#. Python 3.12: turtle.Turtle.settiltangle
 msgid ""
 "Rotate the turtleshape to point in the specified direction\n"
 "\n"
@@ -1212,20 +1163,20 @@ msgid ""
 "regardless of its current tilt-angle. DO NOT change the turtle's\n"
 "heading (direction of movement).\n"
 "\n"
+"Deprecated since Python 3.1\n"
 "\n"
 "Examples (for a Turtle instance named turtle):\n"
 ">>> turtle.shape(\"circle\")\n"
 ">>> turtle.shapesize(5,2)\n"
 ">>> turtle.settiltangle(45)\n"
-">>> stamp()\n"
+">>> turtle.stamp()\n"
 ">>> turtle.fd(50)\n"
 ">>> turtle.settiltangle(-45)\n"
-">>> stamp()\n"
+">>> turtle.stamp()\n"
 ">>> turtle.fd(50)\n"
 msgstr ""
 
 #. turtle.Turtle.setundobuffer
-#. Python 3.10: turtle.Turtle.setundobuffer
 #. Python 3.11: turtle.Turtle.setundobuffer
 #. Python 3.12: turtle.Turtle.setundobuffer
 #. Python 3.13: turtle.Turtle.setundobuffer
@@ -1248,7 +1199,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.setx
-#. Python 3.10: turtle.Turtle.setx
 #. Python 3.11: turtle.Turtle.setx
 #. Python 3.12: turtle.Turtle.setx
 #. Python 3.13: turtle.Turtle.setx
@@ -1273,7 +1223,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.sety
-#. Python 3.10: turtle.Turtle.sety
 #. Python 3.11: turtle.Turtle.sety
 #. Python 3.12: turtle.Turtle.sety
 #. Python 3.13: turtle.Turtle.sety
@@ -1298,7 +1247,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.shape
-#. Python 3.10: turtle.Turtle.shape
 #. Python 3.11: turtle.Turtle.shape
 #. Python 3.12: turtle.Turtle.shape
 #. Python 3.13: turtle.Turtle.shape
@@ -1327,7 +1275,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.shapesize
-#. Python 3.10: turtle.Turtle.shapesize
 #. Python 3.11: turtle.Turtle.shapesize
 #. Python 3.12: turtle.Turtle.shapesize
 #. Python 3.13: turtle.Turtle.shapesize
@@ -1357,7 +1304,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.shapetransform
-#. Python 3.10: turtle.Turtle.shapetransform
 #. Python 3.11: turtle.Turtle.shapetransform
 #. Python 3.12: turtle.Turtle.shapetransform
 #. Python 3.13: turtle.Turtle.shapetransform
@@ -1386,7 +1332,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.shearfactor
-#. Python 3.10: turtle.Turtle.shearfactor
 #. Python 3.11: turtle.Turtle.shearfactor
 #. Python 3.12: turtle.Turtle.shearfactor
 #. Python 3.13: turtle.Turtle.shearfactor
@@ -1414,7 +1359,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.showturtle
-#. Python 3.10: turtle.Turtle.showturtle
 #. Python 3.11: turtle.Turtle.showturtle
 #. Python 3.12: turtle.Turtle.showturtle
 #. Python 3.13: turtle.Turtle.showturtle
@@ -1434,7 +1378,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.speed
-#. Python 3.10: turtle.Turtle.speed
 #. Python 3.11: turtle.Turtle.speed
 #. Python 3.12: turtle.Turtle.speed
 #. Python 3.13: turtle.Turtle.speed
@@ -1470,7 +1413,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.stamp
-#. Python 3.10: turtle.Turtle.stamp
 #. Python 3.11: turtle.Turtle.stamp
 #. Python 3.12: turtle.Turtle.stamp
 #. Python 3.13: turtle.Turtle.stamp
@@ -1494,7 +1436,6 @@ msgid ""
 msgstr ""
 
 #. turtle.Turtle.tilt
-#. Python 3.10: turtle.Turtle.tilt
 #. Python 3.11: turtle.Turtle.tilt
 #. Python 3.12: turtle.Turtle.tilt
 #. Python 3.13: turtle.Turtle.tilt
@@ -1516,926 +1457,6 @@ msgid ""
 ">>> turtle.tilt(30)\n"
 ">>> turtle.fd(50)\n"
 ">>> turtle.tilt(30)\n"
-">>> turtle.fd(50)\n"
-msgstr ""
-
-#. turtle.Turtle.tiltangle
-#. Python 3.10: turtle.Turtle.tiltangle
-msgid ""
-"Set or return the current tilt-angle.\n"
-"\n"
-"Optional argument: angle -- number\n"
-"\n"
-"Rotate the turtleshape to point in the direction specified by angle,\n"
-"regardless of its current tilt-angle. DO NOT change the turtle's\n"
-"heading (direction of movement).\n"
-"If angle is not given: return the current tilt-angle, i. e. the angle\n"
-"between the orientation of the turtleshape and the heading of the\n"
-"turtle (its direction of movement).\n"
-"\n"
-"(Incorrectly marked as deprecated since Python 3.1, it is really\n"
-"settiltangle that is deprecated.)\n"
-"\n"
-"Examples (for a Turtle instance named turtle):\n"
-">>> turtle.shape(\"circle\")\n"
-">>> turtle.shapesize(5,2)\n"
-">>> turtle.tilt(45)\n"
-">>> turtle.tiltangle()\n"
-msgstr ""
-
-#. turtle.Turtle.towards
-#. Python 3.10: turtle.Turtle.towards
-#. Python 3.11: turtle.Turtle.towards
-#. Python 3.12: turtle.Turtle.towards
-#. Python 3.13: turtle.Turtle.towards
-#. Python 3.14: turtle.Turtle.towards
-#. Python 3.15: turtle.Turtle.towards
-#. Python 3.16: turtle.Turtle.towards
-msgid ""
-"Return the angle of the line from the turtle's position to (x, y).\n"
-"\n"
-"Arguments:\n"
-"x -- a number   or  a pair/vector of numbers   or   a turtle instance\n"
-"y -- a number       None                            None\n"
-"\n"
-"call: distance(x, y)         # two coordinates\n"
-"--or: distance((x, y))       # a pair (tuple) of coordinates\n"
-"--or: distance(vec)          # e.g. as returned by pos()\n"
-"--or: distance(mypen)        # where mypen is another turtle\n"
-"\n"
-"Return the angle, between the line from turtle-position to position\n"
-"specified by x, y and the turtle's start orientation. (Depends on\n"
-"modes - \"standard\" or \"logo\")\n"
-"\n"
-"Example (for a Turtle instance named turtle):\n"
-">>> turtle.pos()\n"
-"(10.00, 10.00)\n"
-">>> turtle.towards(0,0)\n"
-"225.0\n"
-msgstr ""
-
-#. turtle.Turtle.undo
-#. Python 3.10: turtle.Turtle.undo
-#. Python 3.11: turtle.Turtle.undo
-#. Python 3.12: turtle.Turtle.undo
-#. Python 3.13: turtle.Turtle.undo
-#. Python 3.14: turtle.Turtle.undo
-#. Python 3.15: turtle.Turtle.undo
-#. Python 3.16: turtle.Turtle.undo
-msgid ""
-"undo (repeatedly) the last turtle action.\n"
-"\n"
-"No argument.\n"
-"\n"
-"undo (repeatedly) the last turtle action.\n"
-"Number of available undo actions is determined by the size of\n"
-"the undobuffer.\n"
-"\n"
-"Example (for a Turtle instance named turtle):\n"
-">>> for i in range(4):\n"
-"...     turtle.fd(50); turtle.lt(80)\n"
-"...\n"
-">>> for i in range(8):\n"
-"...     turtle.undo()\n"
-"...\n"
-msgstr ""
-
-#. turtle.Turtle.undobufferentries
-#. Python 3.10: turtle.Turtle.undobufferentries
-#. Python 3.11: turtle.Turtle.undobufferentries
-#. Python 3.12: turtle.Turtle.undobufferentries
-#. Python 3.13: turtle.Turtle.undobufferentries
-#. Python 3.14: turtle.Turtle.undobufferentries
-#. Python 3.15: turtle.Turtle.undobufferentries
-#. Python 3.16: turtle.Turtle.undobufferentries
-msgid ""
-"Return count of entries in the undobuffer.\n"
-"\n"
-"No argument.\n"
-"\n"
-"Example (for a Turtle instance named turtle):\n"
-">>> while undobufferentries():\n"
-"...     undo()\n"
-msgstr ""
-
-#. turtle.Turtle.write
-#. Python 3.10: turtle.Turtle.write
-#. Python 3.11: turtle.Turtle.write
-#. Python 3.12: turtle.Turtle.write
-#. Python 3.13: turtle.Turtle.write
-#. Python 3.14: turtle.Turtle.write
-#. Python 3.15: turtle.Turtle.write
-#. Python 3.16: turtle.Turtle.write
-msgid ""
-"Write text at the current turtle position.\n"
-"\n"
-"Arguments:\n"
-"arg -- info, which is to be written to the TurtleScreen\n"
-"move (optional) -- True/False\n"
-"align (optional) -- one of the strings \"left\", \"center\" or right\"\n"
-"font (optional) -- a triple (fontname, fontsize, fonttype)\n"
-"\n"
-"Write text - the string representation of arg - at the current\n"
-"turtle position according to align (\"left\", \"center\" or right\")\n"
-"and with the given font.\n"
-"If move is True, the pen is moved to the bottom-right corner\n"
-"of the text. By default, move is False.\n"
-"\n"
-"Example (for a Turtle instance named turtle):\n"
-">>> turtle.write('Home = ', True, align=\"center\")\n"
-">>> turtle.write((0,0), True)\n"
-msgstr ""
-
-#. turtle.Turtle.xcor
-#. Python 3.10: turtle.Turtle.xcor
-#. Python 3.11: turtle.Turtle.xcor
-msgid ""
-"Return the turtle's x coordinate.\n"
-"\n"
-"No arguments.\n"
-"\n"
-"Example (for a Turtle instance named turtle):\n"
-">>> reset()\n"
-">>> turtle.left(60)\n"
-">>> turtle.forward(100)\n"
-">>> print turtle.xcor()\n"
-"50.0\n"
-msgstr ""
-
-#. turtle.Turtle.ycor
-#. Python 3.10: turtle.Turtle.ycor
-#. Python 3.11: turtle.Turtle.ycor
-msgid ""
-"Return the turtle's y coordinate\n"
-"---\n"
-"No arguments.\n"
-"\n"
-"Example (for a Turtle instance named turtle):\n"
-">>> reset()\n"
-">>> turtle.left(60)\n"
-">>> turtle.forward(100)\n"
-">>> print turtle.ycor()\n"
-"86.6025403784\n"
-msgstr ""
-
-#. turtle.TurtleScreen
-#. Python 3.10: turtle.TurtleScreen
-#. Python 3.11: turtle.TurtleScreen
-#. Python 3.12: turtle.TurtleScreen
-#. Python 3.13: turtle.TurtleScreen
-#. Python 3.14: turtle.TurtleScreen
-#. Python 3.15: turtle.TurtleScreen
-#. Python 3.16: turtle.TurtleScreen
-msgid ""
-"Provides screen oriented methods like bgcolor etc.\n"
-"\n"
-"Only relies upon the methods of TurtleScreenBase and NOT\n"
-"upon components of the underlying graphics toolkit -\n"
-"which is Tkinter in this case.\n"
-msgstr ""
-
-#. turtle.Vec2D
-#. Python 3.10: turtle.Vec2D
-#. Python 3.11: turtle.Vec2D
-#. Python 3.12: turtle.Vec2D
-#. Python 3.13: turtle.Vec2D
-#. Python 3.14: turtle.Vec2D
-#. Python 3.15: turtle.Vec2D
-#. Python 3.16: turtle.Vec2D
-msgid ""
-"A 2 dimensional vector class, used as a helper class\n"
-"for implementing turtle graphics.\n"
-"May be useful for turtle graphics programs also.\n"
-"Derived from tuple, so a vector is a tuple!\n"
-"\n"
-"Provides (for a, b vectors, k number):\n"
-"   a+b vector addition\n"
-"   a-b vector subtraction\n"
-"   a*b inner product\n"
-"   k*a and a*k multiplication with scalar\n"
-"   |a| absolute value of a\n"
-"   a.rotate(angle) rotation\n"
-msgstr ""
-
-#. turtle._Screen.bgcolor
-#. Python 3.10: turtle._Screen.bgcolor
-#. Python 3.11: turtle._Screen.bgcolor
-#. Python 3.12: turtle._Screen.bgcolor
-msgid ""
-"Set or return backgroundcolor of the TurtleScreen.\n"
-"\n"
-"Arguments (if given): a color string or three numbers\n"
-"in the range 0..colormode or a 3-tuple of such numbers.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.bgcolor(\"orange\")\n"
-">>> screen.bgcolor()\n"
-"'orange'\n"
-">>> screen.bgcolor(0.5,0,0.5)\n"
-">>> screen.bgcolor()\n"
-"'#800080'\n"
-msgstr ""
-
-#. turtle._Screen.bgpic
-#. Python 3.10: turtle._Screen.bgpic
-#. Python 3.11: turtle._Screen.bgpic
-#. Python 3.12: turtle._Screen.bgpic
-#. Python 3.13: turtle._Screen.bgpic
-msgid ""
-"Set background image or return name of current backgroundimage.\n"
-"\n"
-"Optional argument:\n"
-"picname -- a string, name of a gif-file or \"nopic\".\n"
-"\n"
-"If picname is a filename, set the corresponding image as background.\n"
-"If picname is \"nopic\", delete backgroundimage, if present.\n"
-"If picname is None, return the filename of the current backgroundimage.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.bgpic()\n"
-"'nopic'\n"
-">>> screen.bgpic(\"landscape.gif\")\n"
-">>> screen.bgpic()\n"
-"'landscape.gif'\n"
-msgstr ""
-
-#. turtle._Screen.bye
-#. Python 3.10: turtle._Screen.bye
-#. Python 3.11: turtle._Screen.bye
-#. Python 3.12: turtle._Screen.bye
-#. Python 3.13: turtle._Screen.bye
-#. Python 3.14: turtle._Screen.bye
-#. Python 3.15: turtle._Screen.bye
-#. Python 3.16: turtle._Screen.bye
-msgid ""
-"Shut the turtlegraphics window.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.bye()\n"
-msgstr ""
-
-#. turtle._Screen.clearscreen
-#. Python 3.10: turtle._Screen.clearscreen
-#. Python 3.11: turtle._Screen.clearscreen
-#. Python 3.12: turtle._Screen.clearscreen
-#. Python 3.13: turtle._Screen.clearscreen
-#. Python 3.14: turtle._Screen.clearscreen
-#. Python 3.15: turtle._Screen.clearscreen
-#. Python 3.16: turtle._Screen.clearscreen
-msgid ""
-"Delete all drawings and all turtles from the TurtleScreen.\n"
-"\n"
-"No argument.\n"
-"\n"
-"Reset empty TurtleScreen to its initial state: white background,\n"
-"no backgroundimage, no eventbindings and tracing on.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.clear()\n"
-"\n"
-"Note: this method is not available as function.\n"
-msgstr ""
-
-#. turtle._Screen.colormode
-#. Python 3.10: turtle._Screen.colormode
-#. Python 3.11: turtle._Screen.colormode
-#. Python 3.12: turtle._Screen.colormode
-#. Python 3.13: turtle._Screen.colormode
-#. Python 3.14: turtle._Screen.colormode
-#. Python 3.15: turtle._Screen.colormode
-#. Python 3.16: turtle._Screen.colormode
-msgid ""
-"Return the colormode or set it to 1.0 or 255.\n"
-"\n"
-"Optional argument:\n"
-"cmode -- one of the values 1.0 or 255\n"
-"\n"
-"r, g, b values of colortriples have to be in range 0..cmode.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.colormode()\n"
-"1.0\n"
-">>> screen.colormode(255)\n"
-">>> pencolor(240,160,80)\n"
-msgstr ""
-
-#. turtle._Screen.delay
-#. Python 3.10: turtle._Screen.delay
-#. Python 3.11: turtle._Screen.delay
-#. Python 3.12: turtle._Screen.delay
-#. Python 3.13: turtle._Screen.delay
-#. Python 3.14: turtle._Screen.delay
-#. Python 3.15: turtle._Screen.delay
-#. Python 3.16: turtle._Screen.delay
-msgid ""
-"Return or set the drawing delay in milliseconds.\n"
-"\n"
-"Optional argument:\n"
-"delay -- positive integer\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.delay(15)\n"
-">>> screen.delay()\n"
-"15\n"
-msgstr ""
-
-#. turtle._Screen.exitonclick
-#. Python 3.10: turtle._Screen.exitonclick
-#. Python 3.11: turtle._Screen.exitonclick
-#. Python 3.12: turtle._Screen.exitonclick
-#. Python 3.13: turtle._Screen.exitonclick
-#. Python 3.14: turtle._Screen.exitonclick
-#. Python 3.15: turtle._Screen.exitonclick
-#. Python 3.16: turtle._Screen.exitonclick
-msgid ""
-"Go into mainloop until the mouse is clicked.\n"
-"\n"
-"No arguments.\n"
-"\n"
-"Bind bye() method to mouseclick on TurtleScreen.\n"
-"If \"using_IDLE\" - value in configuration dictionary is False\n"
-"(default value), enter mainloop.\n"
-"If IDLE with -n switch (no subprocess) is used, this value should be\n"
-"set to True in turtle.cfg. In this case IDLE's mainloop\n"
-"is active also for the client script.\n"
-"\n"
-"This is a method of the Screen-class and not available for\n"
-"TurtleScreen instances.\n"
-"\n"
-"Example (for a Screen instance named screen):\n"
-">>> screen.exitonclick()\n"
-"\n"
-msgstr ""
-
-#. turtle._Screen.getcanvas
-#. Python 3.10: turtle._Screen.getcanvas
-#. Python 3.11: turtle._Screen.getcanvas
-#. Python 3.12: turtle._Screen.getcanvas
-#. Python 3.13: turtle._Screen.getcanvas
-#. Python 3.14: turtle._Screen.getcanvas
-#. Python 3.15: turtle._Screen.getcanvas
-#. Python 3.16: turtle._Screen.getcanvas
-msgid ""
-"Return the Canvas of this TurtleScreen.\n"
-"\n"
-"No argument.\n"
-"\n"
-"Example (for a Screen instance named screen):\n"
-">>> cv = screen.getcanvas()\n"
-">>> cv\n"
-"<turtle.ScrolledCanvas instance at 0x010742D8>\n"
-msgstr ""
-
-#. turtle._Screen.getshapes
-#. Python 3.10: turtle._Screen.getshapes
-#. Python 3.11: turtle._Screen.getshapes
-#. Python 3.12: turtle._Screen.getshapes
-#. Python 3.13: turtle._Screen.getshapes
-#. Python 3.14: turtle._Screen.getshapes
-#. Python 3.15: turtle._Screen.getshapes
-#. Python 3.16: turtle._Screen.getshapes
-msgid ""
-"Return a list of names of all currently available turtle shapes.\n"
-"\n"
-"No argument.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.getshapes()\n"
-"['arrow', 'blank', 'circle', ... , 'turtle']\n"
-msgstr ""
-
-#. turtle._Screen.listen
-#. Python 3.10: turtle._Screen.listen
-#. Python 3.11: turtle._Screen.listen
-#. Python 3.12: turtle._Screen.listen
-#. Python 3.13: turtle._Screen.listen
-#. Python 3.14: turtle._Screen.listen
-#. Python 3.15: turtle._Screen.listen
-#. Python 3.16: turtle._Screen.listen
-msgid ""
-"Set focus on TurtleScreen (in order to collect key-events)\n"
-"\n"
-"No arguments.\n"
-"Dummy arguments are provided in order\n"
-"to be able to pass listen to the onclick method.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.listen()\n"
-msgstr ""
-
-#. turtle._Screen.mainloop
-#. Python 3.10: turtle._Screen.mainloop
-#. Python 3.11: turtle._Screen.mainloop
-#. Python 3.12: turtle._Screen.mainloop
-#. Python 3.13: turtle._Screen.mainloop
-#. Python 3.14: turtle._Screen.mainloop
-#. Python 3.15: turtle._Screen.mainloop
-#. Python 3.16: turtle._Screen.mainloop
-msgid ""
-"Starts event loop - calling Tkinter's mainloop function.\n"
-"\n"
-"No argument.\n"
-"\n"
-"Must be last statement in a turtle graphics program.\n"
-"Must NOT be used if a script is run from within IDLE in -n mode\n"
-"(No subprocess) - for interactive use of turtle graphics.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.mainloop()\n"
-"\n"
-msgstr ""
-
-#. turtle._Screen.mode
-#. Python 3.10: turtle._Screen.mode
-#. Python 3.11: turtle._Screen.mode
-#. Python 3.12: turtle._Screen.mode
-#. Python 3.13: turtle._Screen.mode
-#. Python 3.14: turtle._Screen.mode
-#. Python 3.15: turtle._Screen.mode
-#. Python 3.16: turtle._Screen.mode
-msgid ""
-"Set turtle-mode ('standard', 'logo' or 'world') and perform reset.\n"
-"\n"
-"Optional argument:\n"
-"mode -- one of the strings 'standard', 'logo' or 'world'\n"
-"\n"
-"Mode 'standard' is compatible with turtle.py.\n"
-"Mode 'logo' is compatible with most Logo-Turtle-Graphics.\n"
-"Mode 'world' uses userdefined 'worldcoordinates'. *Attention*: in\n"
-"this mode angles appear distorted if x/y unit-ratio doesn't equal 1.\n"
-"If mode is not given, return the current mode.\n"
-"\n"
-"     Mode      Initial turtle heading     positive angles\n"
-" ------------|-------------------------|-------------------\n"
-"  'standard'    to the right (east)       counterclockwise\n"
-"    'logo'        upward    (north)         clockwise\n"
-"\n"
-"Examples:\n"
-">>> mode('logo')   # resets turtle heading to north\n"
-">>> mode()\n"
-"'logo'\n"
-msgstr ""
-
-#. turtle._Screen.numinput
-#. Python 3.10: turtle._Screen.numinput
-#. Python 3.11: turtle._Screen.numinput
-#. Python 3.12: turtle._Screen.numinput
-#. Python 3.13: turtle._Screen.numinput
-#. Python 3.14: turtle._Screen.numinput
-#. Python 3.15: turtle._Screen.numinput
-#. Python 3.16: turtle._Screen.numinput
-msgid ""
-"Pop up a dialog window for input of a number.\n"
-"\n"
-"Arguments: title is the title of the dialog window,\n"
-"prompt is a text mostly describing what numerical information to input.\n"
-"default: default value\n"
-"minval: minimum value for input\n"
-"maxval: maximum value for input\n"
-"\n"
-"The number input must be in the range minval .. maxval if these are\n"
-"given. If not, a hint is issued and the dialog remains open for\n"
-"correction. Return the number input.\n"
-"If the dialog is canceled,  return None.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.numinput(\"Poker\", \"Your stakes:\", 1000, minval=10, maxval=10000)\n"
-"\n"
-msgstr ""
-
-#. turtle._Screen.onkey
-#. Python 3.10: turtle._Screen.onkey
-#. turtle._Screen.onkeyrelease
-#. Python 3.10: turtle._Screen.onkeyrelease
-#. Python 3.11: turtle._Screen.onkey
-#. Python 3.11: turtle._Screen.onkeyrelease
-#. Python 3.12: turtle._Screen.onkey
-#. Python 3.12: turtle._Screen.onkeyrelease
-#. Python 3.13: turtle._Screen.onkey
-#. Python 3.13: turtle._Screen.onkeyrelease
-#. Python 3.14: turtle._Screen.onkey
-#. Python 3.14: turtle._Screen.onkeyrelease
-#. Python 3.15: turtle._Screen.onkey
-#. Python 3.15: turtle._Screen.onkeyrelease
-#. Python 3.16: turtle._Screen.onkey
-#. Python 3.16: turtle._Screen.onkeyrelease
-msgid ""
-"Bind fun to key-release event of key.\n"
-"\n"
-"Arguments:\n"
-"fun -- a function with no arguments\n"
-"key -- a string: key (e.g. \"a\") or key-symbol (e.g. \"space\")\n"
-"\n"
-"In order to be able to register key-events, TurtleScreen\n"
-"must have focus. (See method listen.)\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-"\n"
-">>> def f():\n"
-"...     fd(50)\n"
-"...     lt(60)\n"
-"...\n"
-">>> screen.onkey(f, \"Up\")\n"
-">>> screen.listen()\n"
-"\n"
-"Subsequently the turtle can be moved by repeatedly pressing\n"
-"the up-arrow key, consequently drawing a hexagon\n"
-"\n"
-msgstr ""
-
-#. turtle._Screen.onkeypress
-#. Python 3.10: turtle._Screen.onkeypress
-#. Python 3.11: turtle._Screen.onkeypress
-#. Python 3.12: turtle._Screen.onkeypress
-#. Python 3.13: turtle._Screen.onkeypress
-#. Python 3.14: turtle._Screen.onkeypress
-#. Python 3.15: turtle._Screen.onkeypress
-#. Python 3.16: turtle._Screen.onkeypress
-msgid ""
-"Bind fun to key-press event of key if key is given,\n"
-"or to any key-press-event if no key is given.\n"
-"\n"
-"Arguments:\n"
-"fun -- a function with no arguments\n"
-"key -- a string: key (e.g. \"a\") or key-symbol (e.g. \"space\")\n"
-"\n"
-"In order to be able to register key-events, TurtleScreen\n"
-"must have focus. (See method listen.)\n"
-"\n"
-"Example (for a TurtleScreen instance named screen\n"
-"and a Turtle instance named turtle):\n"
-"\n"
-">>> def f():\n"
-"...     fd(50)\n"
-"...     lt(60)\n"
-"...\n"
-">>> screen.onkeypress(f, \"Up\")\n"
-">>> screen.listen()\n"
-"\n"
-"Subsequently the turtle can be moved by repeatedly pressing\n"
-"the up-arrow key, or by keeping pressed the up-arrow key.\n"
-"consequently drawing a hexagon.\n"
-msgstr ""
-
-#. turtle._Screen.onscreenclick
-#. Python 3.10: turtle._Screen.onscreenclick
-#. Python 3.11: turtle._Screen.onscreenclick
-#. Python 3.12: turtle._Screen.onscreenclick
-#. Python 3.13: turtle._Screen.onscreenclick
-#. Python 3.14: turtle._Screen.onscreenclick
-#. Python 3.15: turtle._Screen.onscreenclick
-#. Python 3.16: turtle._Screen.onscreenclick
-msgid ""
-"Bind fun to mouse-click event on canvas.\n"
-"\n"
-"Arguments:\n"
-"fun -- a function with two arguments, the coordinates of the\n"
-"       clicked point on the canvas.\n"
-"btn -- the number of the mouse-button, defaults to 1\n"
-"\n"
-"Example (for a TurtleScreen instance named screen)\n"
-"\n"
-">>> screen.onclick(goto)\n"
-">>> # Subsequently clicking into the TurtleScreen will\n"
-">>> # make the turtle move to the clicked point.\n"
-">>> screen.onclick(None)\n"
-msgstr ""
-
-#. turtle._Screen.ontimer
-#. Python 3.10: turtle._Screen.ontimer
-#. Python 3.11: turtle._Screen.ontimer
-#. Python 3.12: turtle._Screen.ontimer
-#. Python 3.13: turtle._Screen.ontimer
-#. Python 3.14: turtle._Screen.ontimer
-#. Python 3.15: turtle._Screen.ontimer
-#. Python 3.16: turtle._Screen.ontimer
-msgid ""
-"Install a timer, which calls fun after t milliseconds.\n"
-"\n"
-"Arguments:\n"
-"fun -- a function with no arguments.\n"
-"t -- a number >= 0\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-"\n"
-">>> running = True\n"
-">>> def f():\n"
-"...     if running:\n"
-"...             fd(50)\n"
-"...             lt(60)\n"
-"...             screen.ontimer(f, 250)\n"
-"...\n"
-">>> f()   # makes the turtle marching around\n"
-">>> running = False\n"
-msgstr ""
-
-#. turtle._Screen.register_shape
-#. Python 3.10: turtle._Screen.register_shape
-#. Python 3.11: turtle._Screen.register_shape
-#. Python 3.12: turtle._Screen.register_shape
-#. Python 3.13: turtle._Screen.register_shape
-msgid ""
-"Adds a turtle shape to TurtleScreen's shapelist.\n"
-"\n"
-"Arguments:\n"
-"(1) name is the name of a gif-file and shape is None.\n"
-"    Installs the corresponding image shape.\n"
-"    !! Image-shapes DO NOT rotate when turning the turtle,\n"
-"    !! so they do not display the heading of the turtle!\n"
-"(2) name is an arbitrary string and shape is a tuple\n"
-"    of pairs of coordinates. Installs the corresponding\n"
-"    polygon shape\n"
-"(3) name is an arbitrary string and shape is a\n"
-"    (compound) Shape object. Installs the corresponding\n"
-"    compound shape.\n"
-"To use a shape, you have to issue the command shape(shapename).\n"
-"\n"
-"call: register_shape(\"turtle.gif\")\n"
-"--or: register_shape(\"tri\", ((0,0), (10,10), (-10,10)))\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.register_shape(\"triangle\", ((5,-3),(0,5),(-5,-3)))\n"
-"\n"
-msgstr ""
-
-#. turtle._Screen.resetscreen
-#. Python 3.10: turtle._Screen.resetscreen
-#. Python 3.11: turtle._Screen.resetscreen
-#. Python 3.12: turtle._Screen.resetscreen
-#. Python 3.13: turtle._Screen.resetscreen
-#. Python 3.14: turtle._Screen.resetscreen
-#. Python 3.15: turtle._Screen.resetscreen
-#. Python 3.16: turtle._Screen.resetscreen
-msgid ""
-"Reset all Turtles on the Screen to their initial state.\n"
-"\n"
-"No argument.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.reset()\n"
-msgstr ""
-
-#. turtle._Screen.screensize
-#. Python 3.10: turtle._Screen.screensize
-#. Python 3.11: turtle._Screen.screensize
-#. Python 3.12: turtle._Screen.screensize
-#. Python 3.13: turtle._Screen.screensize
-#. Python 3.14: turtle._Screen.screensize
-#. Python 3.15: turtle._Screen.screensize
-#. Python 3.16: turtle._Screen.screensize
-msgid ""
-"Resize the canvas the turtles are drawing on.\n"
-"\n"
-"Optional arguments:\n"
-"canvwidth -- positive integer, new width of canvas in pixels\n"
-"canvheight --  positive integer, new height of canvas in pixels\n"
-"bg -- colorstring or color-tuple, new backgroundcolor\n"
-"If no arguments are given, return current (canvaswidth, canvasheight)\n"
-"\n"
-"Do not alter the drawing window. To observe hidden parts of\n"
-"the canvas use the scrollbars. (Can make visible those parts\n"
-"of a drawing, which were outside the canvas before!)\n"
-"\n"
-"Example (for a Turtle instance named turtle):\n"
-">>> turtle.screensize(2000,1500)\n"
-">>> # e.g. to search for an erroneously escaped turtle ;-)\n"
-msgstr ""
-
-#. turtle._Screen.setup
-#. Python 3.10: turtle._Screen.setup
-#. Python 3.11: turtle._Screen.setup
-#. Python 3.12: turtle._Screen.setup
-#. Python 3.13: turtle._Screen.setup
-#. Python 3.14: turtle._Screen.setup
-#. Python 3.15: turtle._Screen.setup
-#. Python 3.16: turtle._Screen.setup
-#, python-format
-msgid ""
-"Set the size and position of the main window.\n"
-"\n"
-"Arguments:\n"
-"width: as integer a size in pixels, as float a fraction of the screen.\n"
-"  Default is 50% of screen.\n"
-"height: as integer the height in pixels, as float a fraction of the\n"
-"  screen. Default is 75% of screen.\n"
-"startx: if positive, starting position in pixels from the left\n"
-"  edge of the screen, if negative from the right edge\n"
-"  Default, startx=None is to center window horizontally.\n"
-"starty: if positive, starting position in pixels from the top\n"
-"  edge of the screen, if negative from the bottom edge\n"
-"  Default, starty=None is to center window vertically.\n"
-"\n"
-"Examples (for a Screen instance named screen):\n"
-">>> screen.setup (width=200, height=200, startx=0, starty=0)\n"
-"\n"
-"sets window to 200x200 pixels, in upper left of screen\n"
-"\n"
-">>> screen.setup(width=.75, height=0.5, startx=None, starty=None)\n"
-"\n"
-"sets window to 75% of screen by 50% of screen and centers\n"
-msgstr ""
-
-#. turtle._Screen.setworldcoordinates
-#. Python 3.10: turtle._Screen.setworldcoordinates
-#. Python 3.11: turtle._Screen.setworldcoordinates
-#. Python 3.12: turtle._Screen.setworldcoordinates
-#. Python 3.13: turtle._Screen.setworldcoordinates
-#. Python 3.14: turtle._Screen.setworldcoordinates
-#. Python 3.15: turtle._Screen.setworldcoordinates
-#. Python 3.16: turtle._Screen.setworldcoordinates
-msgid ""
-"Set up a user defined coordinate-system.\n"
-"\n"
-"Arguments:\n"
-"llx -- a number, x-coordinate of lower left corner of canvas\n"
-"lly -- a number, y-coordinate of lower left corner of canvas\n"
-"urx -- a number, x-coordinate of upper right corner of canvas\n"
-"ury -- a number, y-coordinate of upper right corner of canvas\n"
-"\n"
-"Set up user coodinat-system and switch to mode 'world' if necessary.\n"
-"This performs a screen.reset. If mode 'world' is already active,\n"
-"all drawings are redrawn according to the new coordinates.\n"
-"\n"
-"But ATTENTION: in user-defined coordinatesystems angles may appear\n"
-"distorted. (see Screen.mode())\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.setworldcoordinates(-10,-0.5,50,1.5)\n"
-">>> for _ in range(36):\n"
-"...     left(10)\n"
-"...     forward(0.5)\n"
-msgstr ""
-
-#. turtle._Screen.textinput
-#. Python 3.10: turtle._Screen.textinput
-#. Python 3.11: turtle._Screen.textinput
-#. Python 3.12: turtle._Screen.textinput
-#. Python 3.13: turtle._Screen.textinput
-#. Python 3.14: turtle._Screen.textinput
-#. Python 3.15: turtle._Screen.textinput
-#. Python 3.16: turtle._Screen.textinput
-msgid ""
-"Pop up a dialog window for input of a string.\n"
-"\n"
-"Arguments: title is the title of the dialog window,\n"
-"prompt is a text mostly describing what information to input.\n"
-"\n"
-"Return the string input\n"
-"If the dialog is canceled, return None.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.textinput(\"NIM\", \"Name of first player:\")\n"
-"\n"
-msgstr ""
-
-#. turtle._Screen.title
-#. Python 3.10: turtle._Screen.title
-#. Python 3.11: turtle._Screen.title
-#. Python 3.12: turtle._Screen.title
-#. Python 3.13: turtle._Screen.title
-#. Python 3.14: turtle._Screen.title
-#. Python 3.15: turtle._Screen.title
-#. Python 3.16: turtle._Screen.title
-msgid ""
-"Set title of turtle-window\n"
-"\n"
-"Argument:\n"
-"titlestring -- a string, to appear in the titlebar of the\n"
-"               turtle graphics window.\n"
-"\n"
-"This is a method of Screen-class. Not available for TurtleScreen-\n"
-"objects.\n"
-"\n"
-"Example (for a Screen instance named screen):\n"
-">>> screen.title(\"Welcome to the turtle-zoo!\")\n"
-msgstr ""
-
-#. turtle._Screen.tracer
-#. Python 3.10: turtle._Screen.tracer
-#. Python 3.11: turtle._Screen.tracer
-#. Python 3.12: turtle._Screen.tracer
-#. Python 3.13: turtle._Screen.tracer
-#. Python 3.14: turtle._Screen.tracer
-#. Python 3.15: turtle._Screen.tracer
-#. Python 3.16: turtle._Screen.tracer
-msgid ""
-"Turns turtle animation on/off and set delay for update drawings.\n"
-"\n"
-"Optional arguments:\n"
-"n -- nonnegative  integer\n"
-"delay -- nonnegative  integer\n"
-"\n"
-"If n is given, only each n-th regular screen update is really performed.\n"
-"(Can be used to accelerate the drawing of complex graphics.)\n"
-"Second arguments sets delay value (see RawTurtle.delay())\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.tracer(8, 25)\n"
-">>> dist = 2\n"
-">>> for i in range(200):\n"
-"...     fd(dist)\n"
-"...     rt(90)\n"
-"...     dist += 2\n"
-msgstr ""
-
-#. turtle._Screen.turtles
-#. Python 3.10: turtle._Screen.turtles
-#. Python 3.11: turtle._Screen.turtles
-#. Python 3.12: turtle._Screen.turtles
-#. Python 3.13: turtle._Screen.turtles
-#. Python 3.14: turtle._Screen.turtles
-#. Python 3.15: turtle._Screen.turtles
-#. Python 3.16: turtle._Screen.turtles
-msgid ""
-"Return the list of turtles on the screen.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.turtles()\n"
-"[<turtle.Turtle object at 0x00E11FB0>]\n"
-msgstr ""
-
-#. turtle._Screen.update
-#. Python 3.10: turtle._Screen.update
-#. Python 3.11: turtle._Screen.update
-#. Python 3.12: turtle._Screen.update
-#. Python 3.13: turtle._Screen.update
-#. Python 3.14: turtle._Screen.update
-#. Python 3.15: turtle._Screen.update
-#. Python 3.16: turtle._Screen.update
-msgid ""
-"Perform a TurtleScreen update.\n"
-"        "
-msgstr ""
-
-#. turtle._Screen.window_height
-#. Python 3.10: turtle._Screen.window_height
-#. Python 3.11: turtle._Screen.window_height
-#. Python 3.12: turtle._Screen.window_height
-#. Python 3.13: turtle._Screen.window_height
-#. Python 3.14: turtle._Screen.window_height
-#. Python 3.15: turtle._Screen.window_height
-#. Python 3.16: turtle._Screen.window_height
-msgid ""
-"Return the height of the turtle window.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.window_height()\n"
-"480\n"
-msgstr ""
-
-#. turtle._Screen.window_width
-#. Python 3.10: turtle._Screen.window_width
-#. Python 3.11: turtle._Screen.window_width
-#. Python 3.12: turtle._Screen.window_width
-#. Python 3.13: turtle._Screen.window_width
-#. Python 3.14: turtle._Screen.window_width
-#. Python 3.15: turtle._Screen.window_width
-#. Python 3.16: turtle._Screen.window_width
-msgid ""
-"Return the width of the turtle window.\n"
-"\n"
-"Example (for a TurtleScreen instance named screen):\n"
-">>> screen.window_width()\n"
-"640\n"
-msgstr ""
-
-#. turtle.write_docstringdict
-#. Python 3.10: turtle.write_docstringdict
-msgid ""
-"Create and write docstring-dictionary to file.\n"
-"\n"
-"Optional argument:\n"
-"filename -- a string, used as filename\n"
-"            default value is turtle_docstringdict\n"
-"\n"
-"Has to be called explicitly, (not used by the turtle-graphics classes)\n"
-"The docstring dictionary will be written to the Python script <filname>.py\n"
-"It is intended to serve as a template for translation of the docstrings\n"
-"into different languages.\n"
-msgstr ""
-
-#. turtle.Turtle.settiltangle
-#. Python 3.11: turtle.Turtle.settiltangle
-#. Python 3.12: turtle.Turtle.settiltangle
-msgid ""
-"Rotate the turtleshape to point in the specified direction\n"
-"\n"
-"Argument: angle -- number\n"
-"\n"
-"Rotate the turtleshape to point in the direction specified by angle,\n"
-"regardless of its current tilt-angle. DO NOT change the turtle's\n"
-"heading (direction of movement).\n"
-"\n"
-"Deprecated since Python 3.1\n"
-"\n"
-"Examples (for a Turtle instance named turtle):\n"
-">>> turtle.shape(\"circle\")\n"
-">>> turtle.shapesize(5,2)\n"
-">>> turtle.settiltangle(45)\n"
-">>> turtle.stamp()\n"
-">>> turtle.fd(50)\n"
-">>> turtle.settiltangle(-45)\n"
-">>> turtle.stamp()\n"
 ">>> turtle.fd(50)\n"
 msgstr ""
 
@@ -2472,6 +1493,824 @@ msgid ""
 "315.0\n"
 ">>> turtle.stamp()\n"
 ">>> turtle.fd(50)\n"
+msgstr ""
+
+#. turtle.Turtle.towards
+#. Python 3.11: turtle.Turtle.towards
+#. Python 3.12: turtle.Turtle.towards
+#. Python 3.13: turtle.Turtle.towards
+#. Python 3.14: turtle.Turtle.towards
+#. Python 3.15: turtle.Turtle.towards
+#. Python 3.16: turtle.Turtle.towards
+msgid ""
+"Return the angle of the line from the turtle's position to (x, y).\n"
+"\n"
+"Arguments:\n"
+"x -- a number   or  a pair/vector of numbers   or   a turtle instance\n"
+"y -- a number       None                            None\n"
+"\n"
+"call: distance(x, y)         # two coordinates\n"
+"--or: distance((x, y))       # a pair (tuple) of coordinates\n"
+"--or: distance(vec)          # e.g. as returned by pos()\n"
+"--or: distance(mypen)        # where mypen is another turtle\n"
+"\n"
+"Return the angle, between the line from turtle-position to position\n"
+"specified by x, y and the turtle's start orientation. (Depends on\n"
+"modes - \"standard\" or \"logo\")\n"
+"\n"
+"Example (for a Turtle instance named turtle):\n"
+">>> turtle.pos()\n"
+"(10.00, 10.00)\n"
+">>> turtle.towards(0,0)\n"
+"225.0\n"
+msgstr ""
+
+#. turtle.Turtle.undo
+#. Python 3.11: turtle.Turtle.undo
+#. Python 3.12: turtle.Turtle.undo
+#. Python 3.13: turtle.Turtle.undo
+#. Python 3.14: turtle.Turtle.undo
+#. Python 3.15: turtle.Turtle.undo
+#. Python 3.16: turtle.Turtle.undo
+msgid ""
+"undo (repeatedly) the last turtle action.\n"
+"\n"
+"No argument.\n"
+"\n"
+"undo (repeatedly) the last turtle action.\n"
+"Number of available undo actions is determined by the size of\n"
+"the undobuffer.\n"
+"\n"
+"Example (for a Turtle instance named turtle):\n"
+">>> for i in range(4):\n"
+"...     turtle.fd(50); turtle.lt(80)\n"
+"...\n"
+">>> for i in range(8):\n"
+"...     turtle.undo()\n"
+"...\n"
+msgstr ""
+
+#. turtle.Turtle.undobufferentries
+#. Python 3.11: turtle.Turtle.undobufferentries
+#. Python 3.12: turtle.Turtle.undobufferentries
+#. Python 3.13: turtle.Turtle.undobufferentries
+#. Python 3.14: turtle.Turtle.undobufferentries
+#. Python 3.15: turtle.Turtle.undobufferentries
+#. Python 3.16: turtle.Turtle.undobufferentries
+msgid ""
+"Return count of entries in the undobuffer.\n"
+"\n"
+"No argument.\n"
+"\n"
+"Example (for a Turtle instance named turtle):\n"
+">>> while undobufferentries():\n"
+"...     undo()\n"
+msgstr ""
+
+#. turtle.Turtle.write
+#. Python 3.11: turtle.Turtle.write
+#. Python 3.12: turtle.Turtle.write
+#. Python 3.13: turtle.Turtle.write
+#. Python 3.14: turtle.Turtle.write
+#. Python 3.15: turtle.Turtle.write
+#. Python 3.16: turtle.Turtle.write
+msgid ""
+"Write text at the current turtle position.\n"
+"\n"
+"Arguments:\n"
+"arg -- info, which is to be written to the TurtleScreen\n"
+"move (optional) -- True/False\n"
+"align (optional) -- one of the strings \"left\", \"center\" or right\"\n"
+"font (optional) -- a triple (fontname, fontsize, fonttype)\n"
+"\n"
+"Write text - the string representation of arg - at the current\n"
+"turtle position according to align (\"left\", \"center\" or right\")\n"
+"and with the given font.\n"
+"If move is True, the pen is moved to the bottom-right corner\n"
+"of the text. By default, move is False.\n"
+"\n"
+"Example (for a Turtle instance named turtle):\n"
+">>> turtle.write('Home = ', True, align=\"center\")\n"
+">>> turtle.write((0,0), True)\n"
+msgstr ""
+
+#. turtle.Turtle.xcor
+#. Python 3.11: turtle.Turtle.xcor
+msgid ""
+"Return the turtle's x coordinate.\n"
+"\n"
+"No arguments.\n"
+"\n"
+"Example (for a Turtle instance named turtle):\n"
+">>> reset()\n"
+">>> turtle.left(60)\n"
+">>> turtle.forward(100)\n"
+">>> print turtle.xcor()\n"
+"50.0\n"
+msgstr ""
+
+#. turtle.Turtle.ycor
+#. Python 3.11: turtle.Turtle.ycor
+msgid ""
+"Return the turtle's y coordinate\n"
+"---\n"
+"No arguments.\n"
+"\n"
+"Example (for a Turtle instance named turtle):\n"
+">>> reset()\n"
+">>> turtle.left(60)\n"
+">>> turtle.forward(100)\n"
+">>> print turtle.ycor()\n"
+"86.6025403784\n"
+msgstr ""
+
+#. turtle.TurtleScreen
+#. Python 3.11: turtle.TurtleScreen
+#. Python 3.12: turtle.TurtleScreen
+#. Python 3.13: turtle.TurtleScreen
+#. Python 3.14: turtle.TurtleScreen
+#. Python 3.15: turtle.TurtleScreen
+#. Python 3.16: turtle.TurtleScreen
+msgid ""
+"Provides screen oriented methods like bgcolor etc.\n"
+"\n"
+"Only relies upon the methods of TurtleScreenBase and NOT\n"
+"upon components of the underlying graphics toolkit -\n"
+"which is Tkinter in this case.\n"
+msgstr ""
+
+#. turtle.Vec2D
+#. Python 3.11: turtle.Vec2D
+#. Python 3.12: turtle.Vec2D
+#. Python 3.13: turtle.Vec2D
+#. Python 3.14: turtle.Vec2D
+#. Python 3.15: turtle.Vec2D
+#. Python 3.16: turtle.Vec2D
+msgid ""
+"A 2 dimensional vector class, used as a helper class\n"
+"for implementing turtle graphics.\n"
+"May be useful for turtle graphics programs also.\n"
+"Derived from tuple, so a vector is a tuple!\n"
+"\n"
+"Provides (for a, b vectors, k number):\n"
+"   a+b vector addition\n"
+"   a-b vector subtraction\n"
+"   a*b inner product\n"
+"   k*a and a*k multiplication with scalar\n"
+"   |a| absolute value of a\n"
+"   a.rotate(angle) rotation\n"
+msgstr ""
+
+#. turtle._Screen.bgcolor
+#. Python 3.11: turtle._Screen.bgcolor
+#. Python 3.12: turtle._Screen.bgcolor
+msgid ""
+"Set or return backgroundcolor of the TurtleScreen.\n"
+"\n"
+"Arguments (if given): a color string or three numbers\n"
+"in the range 0..colormode or a 3-tuple of such numbers.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.bgcolor(\"orange\")\n"
+">>> screen.bgcolor()\n"
+"'orange'\n"
+">>> screen.bgcolor(0.5,0,0.5)\n"
+">>> screen.bgcolor()\n"
+"'#800080'\n"
+msgstr ""
+
+#. turtle._Screen.bgpic
+#. Python 3.11: turtle._Screen.bgpic
+#. Python 3.12: turtle._Screen.bgpic
+#. Python 3.13: turtle._Screen.bgpic
+msgid ""
+"Set background image or return name of current backgroundimage.\n"
+"\n"
+"Optional argument:\n"
+"picname -- a string, name of a gif-file or \"nopic\".\n"
+"\n"
+"If picname is a filename, set the corresponding image as background.\n"
+"If picname is \"nopic\", delete backgroundimage, if present.\n"
+"If picname is None, return the filename of the current backgroundimage.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.bgpic()\n"
+"'nopic'\n"
+">>> screen.bgpic(\"landscape.gif\")\n"
+">>> screen.bgpic()\n"
+"'landscape.gif'\n"
+msgstr ""
+
+#. turtle._Screen.bye
+#. Python 3.11: turtle._Screen.bye
+#. Python 3.12: turtle._Screen.bye
+#. Python 3.13: turtle._Screen.bye
+#. Python 3.14: turtle._Screen.bye
+#. Python 3.15: turtle._Screen.bye
+#. Python 3.16: turtle._Screen.bye
+msgid ""
+"Shut the turtlegraphics window.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.bye()\n"
+msgstr ""
+
+#. turtle._Screen.clearscreen
+#. Python 3.11: turtle._Screen.clearscreen
+#. Python 3.12: turtle._Screen.clearscreen
+#. Python 3.13: turtle._Screen.clearscreen
+#. Python 3.14: turtle._Screen.clearscreen
+#. Python 3.15: turtle._Screen.clearscreen
+#. Python 3.16: turtle._Screen.clearscreen
+msgid ""
+"Delete all drawings and all turtles from the TurtleScreen.\n"
+"\n"
+"No argument.\n"
+"\n"
+"Reset empty TurtleScreen to its initial state: white background,\n"
+"no backgroundimage, no eventbindings and tracing on.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.clear()\n"
+"\n"
+"Note: this method is not available as function.\n"
+msgstr ""
+
+#. turtle._Screen.colormode
+#. Python 3.11: turtle._Screen.colormode
+#. Python 3.12: turtle._Screen.colormode
+#. Python 3.13: turtle._Screen.colormode
+#. Python 3.14: turtle._Screen.colormode
+#. Python 3.15: turtle._Screen.colormode
+#. Python 3.16: turtle._Screen.colormode
+msgid ""
+"Return the colormode or set it to 1.0 or 255.\n"
+"\n"
+"Optional argument:\n"
+"cmode -- one of the values 1.0 or 255\n"
+"\n"
+"r, g, b values of colortriples have to be in range 0..cmode.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.colormode()\n"
+"1.0\n"
+">>> screen.colormode(255)\n"
+">>> pencolor(240,160,80)\n"
+msgstr ""
+
+#. turtle._Screen.delay
+#. Python 3.11: turtle._Screen.delay
+#. Python 3.12: turtle._Screen.delay
+#. Python 3.13: turtle._Screen.delay
+#. Python 3.14: turtle._Screen.delay
+#. Python 3.15: turtle._Screen.delay
+#. Python 3.16: turtle._Screen.delay
+msgid ""
+"Return or set the drawing delay in milliseconds.\n"
+"\n"
+"Optional argument:\n"
+"delay -- positive integer\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.delay(15)\n"
+">>> screen.delay()\n"
+"15\n"
+msgstr ""
+
+#. turtle._Screen.exitonclick
+#. Python 3.11: turtle._Screen.exitonclick
+#. Python 3.12: turtle._Screen.exitonclick
+#. Python 3.13: turtle._Screen.exitonclick
+#. Python 3.14: turtle._Screen.exitonclick
+#. Python 3.15: turtle._Screen.exitonclick
+#. Python 3.16: turtle._Screen.exitonclick
+msgid ""
+"Go into mainloop until the mouse is clicked.\n"
+"\n"
+"No arguments.\n"
+"\n"
+"Bind bye() method to mouseclick on TurtleScreen.\n"
+"If \"using_IDLE\" - value in configuration dictionary is False\n"
+"(default value), enter mainloop.\n"
+"If IDLE with -n switch (no subprocess) is used, this value should be\n"
+"set to True in turtle.cfg. In this case IDLE's mainloop\n"
+"is active also for the client script.\n"
+"\n"
+"This is a method of the Screen-class and not available for\n"
+"TurtleScreen instances.\n"
+"\n"
+"Example (for a Screen instance named screen):\n"
+">>> screen.exitonclick()\n"
+"\n"
+msgstr ""
+
+#. turtle._Screen.getcanvas
+#. Python 3.11: turtle._Screen.getcanvas
+#. Python 3.12: turtle._Screen.getcanvas
+#. Python 3.13: turtle._Screen.getcanvas
+#. Python 3.14: turtle._Screen.getcanvas
+#. Python 3.15: turtle._Screen.getcanvas
+#. Python 3.16: turtle._Screen.getcanvas
+msgid ""
+"Return the Canvas of this TurtleScreen.\n"
+"\n"
+"No argument.\n"
+"\n"
+"Example (for a Screen instance named screen):\n"
+">>> cv = screen.getcanvas()\n"
+">>> cv\n"
+"<turtle.ScrolledCanvas instance at 0x010742D8>\n"
+msgstr ""
+
+#. turtle._Screen.getshapes
+#. Python 3.11: turtle._Screen.getshapes
+#. Python 3.12: turtle._Screen.getshapes
+#. Python 3.13: turtle._Screen.getshapes
+#. Python 3.14: turtle._Screen.getshapes
+#. Python 3.15: turtle._Screen.getshapes
+#. Python 3.16: turtle._Screen.getshapes
+msgid ""
+"Return a list of names of all currently available turtle shapes.\n"
+"\n"
+"No argument.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.getshapes()\n"
+"['arrow', 'blank', 'circle', ... , 'turtle']\n"
+msgstr ""
+
+#. turtle._Screen.listen
+#. Python 3.11: turtle._Screen.listen
+#. Python 3.12: turtle._Screen.listen
+#. Python 3.13: turtle._Screen.listen
+#. Python 3.14: turtle._Screen.listen
+#. Python 3.15: turtle._Screen.listen
+#. Python 3.16: turtle._Screen.listen
+msgid ""
+"Set focus on TurtleScreen (in order to collect key-events)\n"
+"\n"
+"No arguments.\n"
+"Dummy arguments are provided in order\n"
+"to be able to pass listen to the onclick method.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.listen()\n"
+msgstr ""
+
+#. turtle._Screen.mainloop
+#. Python 3.11: turtle._Screen.mainloop
+#. Python 3.12: turtle._Screen.mainloop
+#. Python 3.13: turtle._Screen.mainloop
+#. Python 3.14: turtle._Screen.mainloop
+#. Python 3.15: turtle._Screen.mainloop
+#. Python 3.16: turtle._Screen.mainloop
+msgid ""
+"Starts event loop - calling Tkinter's mainloop function.\n"
+"\n"
+"No argument.\n"
+"\n"
+"Must be last statement in a turtle graphics program.\n"
+"Must NOT be used if a script is run from within IDLE in -n mode\n"
+"(No subprocess) - for interactive use of turtle graphics.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.mainloop()\n"
+"\n"
+msgstr ""
+
+#. turtle._Screen.mode
+#. Python 3.11: turtle._Screen.mode
+#. Python 3.12: turtle._Screen.mode
+#. Python 3.13: turtle._Screen.mode
+#. Python 3.14: turtle._Screen.mode
+#. Python 3.15: turtle._Screen.mode
+#. Python 3.16: turtle._Screen.mode
+msgid ""
+"Set turtle-mode ('standard', 'logo' or 'world') and perform reset.\n"
+"\n"
+"Optional argument:\n"
+"mode -- one of the strings 'standard', 'logo' or 'world'\n"
+"\n"
+"Mode 'standard' is compatible with turtle.py.\n"
+"Mode 'logo' is compatible with most Logo-Turtle-Graphics.\n"
+"Mode 'world' uses userdefined 'worldcoordinates'. *Attention*: in\n"
+"this mode angles appear distorted if x/y unit-ratio doesn't equal 1.\n"
+"If mode is not given, return the current mode.\n"
+"\n"
+"     Mode      Initial turtle heading     positive angles\n"
+" ------------|-------------------------|-------------------\n"
+"  'standard'    to the right (east)       counterclockwise\n"
+"    'logo'        upward    (north)         clockwise\n"
+"\n"
+"Examples:\n"
+">>> mode('logo')   # resets turtle heading to north\n"
+">>> mode()\n"
+"'logo'\n"
+msgstr ""
+
+#. turtle._Screen.numinput
+#. Python 3.11: turtle._Screen.numinput
+#. Python 3.12: turtle._Screen.numinput
+#. Python 3.13: turtle._Screen.numinput
+#. Python 3.14: turtle._Screen.numinput
+#. Python 3.15: turtle._Screen.numinput
+#. Python 3.16: turtle._Screen.numinput
+msgid ""
+"Pop up a dialog window for input of a number.\n"
+"\n"
+"Arguments: title is the title of the dialog window,\n"
+"prompt is a text mostly describing what numerical information to input.\n"
+"default: default value\n"
+"minval: minimum value for input\n"
+"maxval: maximum value for input\n"
+"\n"
+"The number input must be in the range minval .. maxval if these are\n"
+"given. If not, a hint is issued and the dialog remains open for\n"
+"correction. Return the number input.\n"
+"If the dialog is canceled,  return None.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.numinput(\"Poker\", \"Your stakes:\", 1000, minval=10, maxval=10000)\n"
+"\n"
+msgstr ""
+
+#. turtle._Screen.onkey
+#. Python 3.11: turtle._Screen.onkey
+#. turtle._Screen.onkeyrelease
+#. Python 3.11: turtle._Screen.onkeyrelease
+#. Python 3.12: turtle._Screen.onkey
+#. Python 3.12: turtle._Screen.onkeyrelease
+#. Python 3.13: turtle._Screen.onkey
+#. Python 3.13: turtle._Screen.onkeyrelease
+#. Python 3.14: turtle._Screen.onkey
+#. Python 3.14: turtle._Screen.onkeyrelease
+#. Python 3.15: turtle._Screen.onkey
+#. Python 3.15: turtle._Screen.onkeyrelease
+#. Python 3.16: turtle._Screen.onkey
+#. Python 3.16: turtle._Screen.onkeyrelease
+msgid ""
+"Bind fun to key-release event of key.\n"
+"\n"
+"Arguments:\n"
+"fun -- a function with no arguments\n"
+"key -- a string: key (e.g. \"a\") or key-symbol (e.g. \"space\")\n"
+"\n"
+"In order to be able to register key-events, TurtleScreen\n"
+"must have focus. (See method listen.)\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+"\n"
+">>> def f():\n"
+"...     fd(50)\n"
+"...     lt(60)\n"
+"...\n"
+">>> screen.onkey(f, \"Up\")\n"
+">>> screen.listen()\n"
+"\n"
+"Subsequently the turtle can be moved by repeatedly pressing\n"
+"the up-arrow key, consequently drawing a hexagon\n"
+"\n"
+msgstr ""
+
+#. turtle._Screen.onkeypress
+#. Python 3.11: turtle._Screen.onkeypress
+#. Python 3.12: turtle._Screen.onkeypress
+#. Python 3.13: turtle._Screen.onkeypress
+#. Python 3.14: turtle._Screen.onkeypress
+#. Python 3.15: turtle._Screen.onkeypress
+#. Python 3.16: turtle._Screen.onkeypress
+msgid ""
+"Bind fun to key-press event of key if key is given,\n"
+"or to any key-press-event if no key is given.\n"
+"\n"
+"Arguments:\n"
+"fun -- a function with no arguments\n"
+"key -- a string: key (e.g. \"a\") or key-symbol (e.g. \"space\")\n"
+"\n"
+"In order to be able to register key-events, TurtleScreen\n"
+"must have focus. (See method listen.)\n"
+"\n"
+"Example (for a TurtleScreen instance named screen\n"
+"and a Turtle instance named turtle):\n"
+"\n"
+">>> def f():\n"
+"...     fd(50)\n"
+"...     lt(60)\n"
+"...\n"
+">>> screen.onkeypress(f, \"Up\")\n"
+">>> screen.listen()\n"
+"\n"
+"Subsequently the turtle can be moved by repeatedly pressing\n"
+"the up-arrow key, or by keeping pressed the up-arrow key.\n"
+"consequently drawing a hexagon.\n"
+msgstr ""
+
+#. turtle._Screen.onscreenclick
+#. Python 3.11: turtle._Screen.onscreenclick
+#. Python 3.12: turtle._Screen.onscreenclick
+#. Python 3.13: turtle._Screen.onscreenclick
+#. Python 3.14: turtle._Screen.onscreenclick
+#. Python 3.15: turtle._Screen.onscreenclick
+#. Python 3.16: turtle._Screen.onscreenclick
+msgid ""
+"Bind fun to mouse-click event on canvas.\n"
+"\n"
+"Arguments:\n"
+"fun -- a function with two arguments, the coordinates of the\n"
+"       clicked point on the canvas.\n"
+"btn -- the number of the mouse-button, defaults to 1\n"
+"\n"
+"Example (for a TurtleScreen instance named screen)\n"
+"\n"
+">>> screen.onclick(goto)\n"
+">>> # Subsequently clicking into the TurtleScreen will\n"
+">>> # make the turtle move to the clicked point.\n"
+">>> screen.onclick(None)\n"
+msgstr ""
+
+#. turtle._Screen.ontimer
+#. Python 3.11: turtle._Screen.ontimer
+#. Python 3.12: turtle._Screen.ontimer
+#. Python 3.13: turtle._Screen.ontimer
+#. Python 3.14: turtle._Screen.ontimer
+#. Python 3.15: turtle._Screen.ontimer
+#. Python 3.16: turtle._Screen.ontimer
+msgid ""
+"Install a timer, which calls fun after t milliseconds.\n"
+"\n"
+"Arguments:\n"
+"fun -- a function with no arguments.\n"
+"t -- a number >= 0\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+"\n"
+">>> running = True\n"
+">>> def f():\n"
+"...     if running:\n"
+"...             fd(50)\n"
+"...             lt(60)\n"
+"...             screen.ontimer(f, 250)\n"
+"...\n"
+">>> f()   # makes the turtle marching around\n"
+">>> running = False\n"
+msgstr ""
+
+#. turtle._Screen.register_shape
+#. Python 3.11: turtle._Screen.register_shape
+#. Python 3.12: turtle._Screen.register_shape
+#. Python 3.13: turtle._Screen.register_shape
+msgid ""
+"Adds a turtle shape to TurtleScreen's shapelist.\n"
+"\n"
+"Arguments:\n"
+"(1) name is the name of a gif-file and shape is None.\n"
+"    Installs the corresponding image shape.\n"
+"    !! Image-shapes DO NOT rotate when turning the turtle,\n"
+"    !! so they do not display the heading of the turtle!\n"
+"(2) name is an arbitrary string and shape is a tuple\n"
+"    of pairs of coordinates. Installs the corresponding\n"
+"    polygon shape\n"
+"(3) name is an arbitrary string and shape is a\n"
+"    (compound) Shape object. Installs the corresponding\n"
+"    compound shape.\n"
+"To use a shape, you have to issue the command shape(shapename).\n"
+"\n"
+"call: register_shape(\"turtle.gif\")\n"
+"--or: register_shape(\"tri\", ((0,0), (10,10), (-10,10)))\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.register_shape(\"triangle\", ((5,-3),(0,5),(-5,-3)))\n"
+"\n"
+msgstr ""
+
+#. turtle._Screen.resetscreen
+#. Python 3.11: turtle._Screen.resetscreen
+#. Python 3.12: turtle._Screen.resetscreen
+#. Python 3.13: turtle._Screen.resetscreen
+#. Python 3.14: turtle._Screen.resetscreen
+#. Python 3.15: turtle._Screen.resetscreen
+#. Python 3.16: turtle._Screen.resetscreen
+msgid ""
+"Reset all Turtles on the Screen to their initial state.\n"
+"\n"
+"No argument.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.reset()\n"
+msgstr ""
+
+#. turtle._Screen.screensize
+#. Python 3.11: turtle._Screen.screensize
+#. Python 3.12: turtle._Screen.screensize
+#. Python 3.13: turtle._Screen.screensize
+#. Python 3.14: turtle._Screen.screensize
+#. Python 3.15: turtle._Screen.screensize
+#. Python 3.16: turtle._Screen.screensize
+msgid ""
+"Resize the canvas the turtles are drawing on.\n"
+"\n"
+"Optional arguments:\n"
+"canvwidth -- positive integer, new width of canvas in pixels\n"
+"canvheight --  positive integer, new height of canvas in pixels\n"
+"bg -- colorstring or color-tuple, new backgroundcolor\n"
+"If no arguments are given, return current (canvaswidth, canvasheight)\n"
+"\n"
+"Do not alter the drawing window. To observe hidden parts of\n"
+"the canvas use the scrollbars. (Can make visible those parts\n"
+"of a drawing, which were outside the canvas before!)\n"
+"\n"
+"Example (for a Turtle instance named turtle):\n"
+">>> turtle.screensize(2000,1500)\n"
+">>> # e.g. to search for an erroneously escaped turtle ;-)\n"
+msgstr ""
+
+#. turtle._Screen.setup
+#. Python 3.11: turtle._Screen.setup
+#. Python 3.12: turtle._Screen.setup
+#. Python 3.13: turtle._Screen.setup
+#. Python 3.14: turtle._Screen.setup
+#. Python 3.15: turtle._Screen.setup
+#. Python 3.16: turtle._Screen.setup
+#, python-format
+msgid ""
+"Set the size and position of the main window.\n"
+"\n"
+"Arguments:\n"
+"width: as integer a size in pixels, as float a fraction of the screen.\n"
+"  Default is 50% of screen.\n"
+"height: as integer the height in pixels, as float a fraction of the\n"
+"  screen. Default is 75% of screen.\n"
+"startx: if positive, starting position in pixels from the left\n"
+"  edge of the screen, if negative from the right edge\n"
+"  Default, startx=None is to center window horizontally.\n"
+"starty: if positive, starting position in pixels from the top\n"
+"  edge of the screen, if negative from the bottom edge\n"
+"  Default, starty=None is to center window vertically.\n"
+"\n"
+"Examples (for a Screen instance named screen):\n"
+">>> screen.setup (width=200, height=200, startx=0, starty=0)\n"
+"\n"
+"sets window to 200x200 pixels, in upper left of screen\n"
+"\n"
+">>> screen.setup(width=.75, height=0.5, startx=None, starty=None)\n"
+"\n"
+"sets window to 75% of screen by 50% of screen and centers\n"
+msgstr ""
+
+#. turtle._Screen.setworldcoordinates
+#. Python 3.11: turtle._Screen.setworldcoordinates
+#. Python 3.12: turtle._Screen.setworldcoordinates
+#. Python 3.13: turtle._Screen.setworldcoordinates
+#. Python 3.14: turtle._Screen.setworldcoordinates
+#. Python 3.15: turtle._Screen.setworldcoordinates
+#. Python 3.16: turtle._Screen.setworldcoordinates
+msgid ""
+"Set up a user defined coordinate-system.\n"
+"\n"
+"Arguments:\n"
+"llx -- a number, x-coordinate of lower left corner of canvas\n"
+"lly -- a number, y-coordinate of lower left corner of canvas\n"
+"urx -- a number, x-coordinate of upper right corner of canvas\n"
+"ury -- a number, y-coordinate of upper right corner of canvas\n"
+"\n"
+"Set up user coodinat-system and switch to mode 'world' if necessary.\n"
+"This performs a screen.reset. If mode 'world' is already active,\n"
+"all drawings are redrawn according to the new coordinates.\n"
+"\n"
+"But ATTENTION: in user-defined coordinatesystems angles may appear\n"
+"distorted. (see Screen.mode())\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.setworldcoordinates(-10,-0.5,50,1.5)\n"
+">>> for _ in range(36):\n"
+"...     left(10)\n"
+"...     forward(0.5)\n"
+msgstr ""
+
+#. turtle._Screen.textinput
+#. Python 3.11: turtle._Screen.textinput
+#. Python 3.12: turtle._Screen.textinput
+#. Python 3.13: turtle._Screen.textinput
+#. Python 3.14: turtle._Screen.textinput
+#. Python 3.15: turtle._Screen.textinput
+#. Python 3.16: turtle._Screen.textinput
+msgid ""
+"Pop up a dialog window for input of a string.\n"
+"\n"
+"Arguments: title is the title of the dialog window,\n"
+"prompt is a text mostly describing what information to input.\n"
+"\n"
+"Return the string input\n"
+"If the dialog is canceled, return None.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.textinput(\"NIM\", \"Name of first player:\")\n"
+"\n"
+msgstr ""
+
+#. turtle._Screen.title
+#. Python 3.11: turtle._Screen.title
+#. Python 3.12: turtle._Screen.title
+#. Python 3.13: turtle._Screen.title
+#. Python 3.14: turtle._Screen.title
+#. Python 3.15: turtle._Screen.title
+#. Python 3.16: turtle._Screen.title
+msgid ""
+"Set title of turtle-window\n"
+"\n"
+"Argument:\n"
+"titlestring -- a string, to appear in the titlebar of the\n"
+"               turtle graphics window.\n"
+"\n"
+"This is a method of Screen-class. Not available for TurtleScreen-\n"
+"objects.\n"
+"\n"
+"Example (for a Screen instance named screen):\n"
+">>> screen.title(\"Welcome to the turtle-zoo!\")\n"
+msgstr ""
+
+#. turtle._Screen.tracer
+#. Python 3.11: turtle._Screen.tracer
+#. Python 3.12: turtle._Screen.tracer
+#. Python 3.13: turtle._Screen.tracer
+#. Python 3.14: turtle._Screen.tracer
+#. Python 3.15: turtle._Screen.tracer
+#. Python 3.16: turtle._Screen.tracer
+msgid ""
+"Turns turtle animation on/off and set delay for update drawings.\n"
+"\n"
+"Optional arguments:\n"
+"n -- nonnegative  integer\n"
+"delay -- nonnegative  integer\n"
+"\n"
+"If n is given, only each n-th regular screen update is really performed.\n"
+"(Can be used to accelerate the drawing of complex graphics.)\n"
+"Second arguments sets delay value (see RawTurtle.delay())\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.tracer(8, 25)\n"
+">>> dist = 2\n"
+">>> for i in range(200):\n"
+"...     fd(dist)\n"
+"...     rt(90)\n"
+"...     dist += 2\n"
+msgstr ""
+
+#. turtle._Screen.turtles
+#. Python 3.11: turtle._Screen.turtles
+#. Python 3.12: turtle._Screen.turtles
+#. Python 3.13: turtle._Screen.turtles
+#. Python 3.14: turtle._Screen.turtles
+#. Python 3.15: turtle._Screen.turtles
+#. Python 3.16: turtle._Screen.turtles
+msgid ""
+"Return the list of turtles on the screen.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.turtles()\n"
+"[<turtle.Turtle object at 0x00E11FB0>]\n"
+msgstr ""
+
+#. turtle._Screen.update
+#. Python 3.11: turtle._Screen.update
+#. Python 3.12: turtle._Screen.update
+#. Python 3.13: turtle._Screen.update
+#. Python 3.14: turtle._Screen.update
+#. Python 3.15: turtle._Screen.update
+#. Python 3.16: turtle._Screen.update
+msgid ""
+"Perform a TurtleScreen update.\n"
+"        "
+msgstr ""
+
+#. turtle._Screen.window_height
+#. Python 3.11: turtle._Screen.window_height
+#. Python 3.12: turtle._Screen.window_height
+#. Python 3.13: turtle._Screen.window_height
+#. Python 3.14: turtle._Screen.window_height
+#. Python 3.15: turtle._Screen.window_height
+#. Python 3.16: turtle._Screen.window_height
+msgid ""
+"Return the height of the turtle window.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.window_height()\n"
+"480\n"
+msgstr ""
+
+#. turtle._Screen.window_width
+#. Python 3.11: turtle._Screen.window_width
+#. Python 3.12: turtle._Screen.window_width
+#. Python 3.13: turtle._Screen.window_width
+#. Python 3.14: turtle._Screen.window_width
+#. Python 3.15: turtle._Screen.window_width
+#. Python 3.16: turtle._Screen.window_width
+msgid ""
+"Return the width of the turtle window.\n"
+"\n"
+"Example (for a TurtleScreen instance named screen):\n"
+">>> screen.window_width()\n"
+"640\n"
 msgstr ""
 
 #. turtle.write_docstringdict

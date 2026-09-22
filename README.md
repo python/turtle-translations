@@ -9,15 +9,15 @@ Translations live in gettext catalogs in the `po/` directory.
 
 ### Extracting the template
 
-The shared template contains all distinct English docstrings for Python 3.10–3.16.
+The shared template contains all distinct English docstrings for Python 3.11–3.16.
 Regenerate it from the committed source mappings (no Tkinter required):
 
 ```console
 $ python scripts/i18n.py extract
-po/turtle.pot: 121 distinct docstrings from Python 3.10–3.16
+po/turtle.pot: 118 distinct docstrings from Python 3.11–3.16
 ```
 
-To refresh the mappings first, use a local CPython checkout with `upstream/3.10`
+To refresh the mappings first, use a local CPython checkout with `upstream/3.11`
 through `upstream/3.15` and `upstream/main` (3.16):
 
 ```console
@@ -64,7 +64,7 @@ that no longer exist in the template rather than keeping them commented out.
 
 ```console
 $ python scripts/i18n.py stats
-pl            0/121 translated (0%), 0 fuzzy
+pl            0/118 translated (0%), 0 fuzzy
 ```
 
 ### Compiling
@@ -82,7 +82,6 @@ normally only need this to test locally:
 
 ```console
 $ python scripts/i18n.py compile
-Compiled: turtle_translations/pl/py310.py
 Compiled: turtle_translations/pl/py311.py
 Compiled: turtle_translations/pl/py312.py
 Compiled: turtle_translations/pl/py313.py
@@ -94,14 +93,14 @@ The shim uses `sys.version_info[:2]`:
 
 | Python | Dictionary |
 | --- | --- |
-| 3.10 and older | 3.10 |
+| 3.10 and older | 3.11 |
 | 3.11 | 3.11 |
 | 3.12 | 3.12 |
 | 3.13 | 3.13 |
 | 3.14 and newer | Shared 3.14–3.16 |
 
-Python 3.10–3.16 is supported. The older-version fallback does not extend the
-package's `>=3.10` installation requirement. Future Python versions use the newest
+Python 3.11–3.16 is supported. The older-version fallback does not extend the
+package's `>=3.11` installation requirement. Future Python versions use the newest
 dictionary until their sources are analyzed. No runtime dependencies are needed
 to import the shim; builds require Babel and Hatchling, but neither Tkinter nor a
 CPython checkout. `turtle_translations.available()` lists language codes.

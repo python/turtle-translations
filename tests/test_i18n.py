@@ -42,7 +42,7 @@ class CatalogTests(unittest.TestCase):
         for message in catalog:
             if message.id:
                 message.string = f"Translation: {message.id}"
-        docs = self.data["groups"]["3.10"]
+        docs = self.data["groups"]["3.11"]
         catalog.get(docs["Turtle.forward"]).flags.add("fuzzy")
         catalog.get(docs["Turtle.back"]).string = ""
         catalog.get(docs["Turtle.left"]).auto_comments = ["turtle.WrongMethod"]
@@ -62,7 +62,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_new_source_does_not_reuse_old_translation(self):
         catalog = i18n.build_template(self.data)
-        original = self.data["groups"]["3.10"]["Turtle.tiltangle"]
+        original = self.data["groups"]["3.11"]["Turtle.tiltangle"]
         catalog.get(original).string = "Old translation"
         path = self.root / "pl.po"
         i18n.write_catalog(catalog, path)
@@ -72,7 +72,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_update_preserves_existing_translation(self):
         catalog = i18n.build_template(self.data)
-        original = self.data["groups"]["3.10"]["Turtle.forward"]
+        original = self.data["groups"]["3.11"]["Turtle.forward"]
         catalog.get(original).string = "Naprzód"
         catalog.update(i18n.build_template(self.data))
         self.assertEqual(catalog.get(original).string, "Naprzód")
@@ -84,10 +84,10 @@ class CatalogTests(unittest.TestCase):
             i18n.write_catalog(catalog, self.root / f"{lang}.po")
         with patch.object(i18n, "PO_DIR", self.root):
             paths = i18n._compile_catalogs(self.root)
-        self.assertEqual(len(paths), 14)
+        self.assertEqual(len(paths), 12)
         self.assertTrue((self.root / "turtle_docstringdict_pt_br.py").is_file())
-        self.assertTrue((self.root / "turtle_translations" / "pl" / "py310.py").is_file())
-        self.assertFalse((self.root / "turtle_translations" / "pl_310.py").exists())
+        self.assertTrue((self.root / "turtle_translations" / "pl" / "py311.py").is_file())
+        self.assertFalse((self.root / "turtle_translations" / "pl" / "py310.py").exists())
         for path in paths:
             ast.parse(path.read_text(encoding="utf-8"), feature_version=(3, 10))
         spec = importlib.util.spec_from_file_location(
@@ -104,8 +104,8 @@ class CatalogTests(unittest.TestCase):
             name = f"turtle_translations.{i18n._module_name('pl', group)}"
             modules[name] = types.SimpleNamespace(docsdict={"group": group})
         modules.update({"turtle": None, "tkinter": None, "babel": None})
-        cases = [(2, 7, "3.10"), (3, 9, "3.10")]
-        cases += [(3, minor, f"3.{min(minor, 14)}") for minor in range(10, 18)]
+        cases = [(2, 7, "3.11"), (3, 9, "3.11")]
+        cases += [(3, minor, f"3.{min(minor, 14)}") for minor in range(11, 18)]
         cases.append((4, 0, "3.14"))
         code = i18n._render_shim("pl", self.data)
         for major, minor, group in cases:

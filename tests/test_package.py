@@ -41,7 +41,7 @@ class PackageTests(unittest.TestCase):
                 self.assertIn("turtle_docstringdict_pl.py", names)
                 self.assertNotIn("turtle_translations/pl.py", names)
                 for group in (310, 311, 312, 313, 314):
-                    self.assertIn(f"turtle_translations/pl_{group}.py", names)
+                    self.assertIn(f"turtle_translations/pl/py{group}.py", names)
             runtime = root / "runtime"
             runtime.mkdir()
             (runtime / "turtle.cfg").write_text("language = pl\n")

@@ -104,7 +104,7 @@ def _load_docsdict(path, docs):
 
 
 def _module_name(lang, group):
-    return f"{lang}_{group.replace('.', '')}"
+    return f"{lang}.py{group.replace('.', '')}"
 
 
 def _render_shim(lang, data):
@@ -140,13 +140,19 @@ def _compile_catalogs(output_dir=None):
         # turtle lowercases the language before importing it!
         lang = path.stem.lower()
         for group, docs in data["groups"].items():
-            target = package_dir / f"{_module_name(lang, group)}.py"
+            target = package_dir / lang / f"py{group.replace('.', '')}.py"
+            target.parent.mkdir(parents=True, exist_ok=True)
             lines = [f"# Generated from {path.name} for Python {group}.", "", "docsdict = {"]
             for key, doc in sorted(_load_docsdict(path, docs).items()):
                 lines.append(f"    {key!r}: {doc!r},")
             lines.append("}")
             target.write_text("\n".join(lines) + "\n", encoding="utf-8")
             written.append(target)
+        package_init = package_dir / lang / "__init__.py"
+        package_init.write_text(
+            f"# Generated package for {path.name}.\n", encoding="utf-8"
+        )
+        written.append(package_init)
         shim = output_dir / f"turtle_docstringdict_{lang}.py"
         shim.write_text(_render_shim(lang, data), encoding="utf-8")
         written.append(shim)

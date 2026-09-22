@@ -70,9 +70,10 @@ pl            0/121 translated (0%), 0 fuzzy
 ### Compiling
 
 Each PO file compiles to a top-level `turtle_docstringdict_<lang>.py` shim and
-internal version-specific dictionaries. The shim exports `docsdict`, which is
-what `turtle` loads. Compilation matches both the method name and its English
-source text, omitting untranslated and fuzzy entries so their help stays English.
+internal version-specific dictionaries under
+`turtle_translations/<lang>/py3<minor><patch>.py`. The shim exports `docsdict`,
+which is what `turtle` loads. Compilation matches both the method name and its
+English source text, omitting untranslated and fuzzy entries so their help stays English.
 One PO entry can serve multiple methods and versions; extracted comments identify
 each use. All English variants remain in the shared catalog.
 
@@ -81,11 +82,11 @@ normally only need this to test locally:
 
 ```console
 $ python scripts/i18n.py compile
-Compiled: turtle_translations/pl_310.py
-Compiled: turtle_translations/pl_311.py
-Compiled: turtle_translations/pl_312.py
-Compiled: turtle_translations/pl_313.py
-Compiled: turtle_translations/pl_314.py
+Compiled: turtle_translations/pl/py310.py
+Compiled: turtle_translations/pl/py311.py
+Compiled: turtle_translations/pl/py312.py
+Compiled: turtle_translations/pl/py313.py
+Compiled: turtle_translations/pl/py314.py
 Compiled: turtle_docstringdict_pl.py
 ```
 

@@ -84,9 +84,10 @@ class CatalogTests(unittest.TestCase):
             i18n.write_catalog(catalog, self.root / f"{lang}.po")
         with patch.object(i18n, "PO_DIR", self.root):
             paths = i18n._compile_catalogs(self.root)
-        self.assertEqual(len(paths), 12)
+        self.assertEqual(len(paths), 14)
         self.assertTrue((self.root / "turtle_docstringdict_pt_br.py").is_file())
-        self.assertFalse((self.root / "turtle_translations" / "pl.py").exists())
+        self.assertTrue((self.root / "turtle_translations" / "pl" / "py310.py").is_file())
+        self.assertFalse((self.root / "turtle_translations" / "pl_310.py").exists())
         for path in paths:
             ast.parse(path.read_text(encoding="utf-8"), feature_version=(3, 10))
         spec = importlib.util.spec_from_file_location(

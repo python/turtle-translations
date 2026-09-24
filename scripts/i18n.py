@@ -3,7 +3,6 @@
 import argparse
 from datetime import datetime, timezone
 from io import BytesIO
-from itertools import groupby
 from pathlib import Path
 
 from babel.messages.catalog import Catalog
@@ -21,12 +20,32 @@ BUGS_ADDRESS = "https://github.com/python/turtle-translations/issues"
 def _version_ranges(versions):
     versions = sorted(tuple(map(int, version.split("."))) for version in versions)
     ranges = []
-    for _, group in groupby(enumerate(versions),
-                            key=lambda item: (item[1][0], item[1][1] - item[0])):
-        members = [version for _, version in group]
-        first, last = (".".join(map(str, version)) for version in (members[0], members[-1]))
-        ranges.append(first if first == last else f"{first}–{last}")
-    return ", ".join(ranges)
+    for version in versions:
+        if ranges:
+            previous = ranges[-1][1]
+            consecutive = (version[:-1] == previous[:-1]
+                           and version[-1] == previous[-1] + 1)
+            # A general minor label also joins patch zero of the next series.
+            next_series = (len(previous) == 2
+                           and version == (previous[0], previous[1] + 1, 0))
+            if consecutive or next_series:
+                ranges[-1][1] = version
+                continue
+        ranges.append([version, version])
+    labels = []
+    for first, last in ranges:
+        start, end = (".".join(map(str, version)) for version in (first, last))
+        labels.append(start if start == end else f"{start}–{end}")
+    return ", ".join(labels)
+
+
+def _comment_version_ranges(versions, latest_versions):
+    """Qualify only older variants of a method within the same minor series."""
+    labels = set()
+    for version in versions:
+        minor = ".".join(version.split(".")[:2])
+        labels.add(minor if latest_versions[minor] in versions else version)
+    return _version_ranges(labels)
 
 
 def build_template(data=None):
@@ -45,13 +64,16 @@ def build_template(data=None):
         ),
     )
     uses = {}
+    latest_versions = {}
     for version in reversed(versions):
         info = data["versions"][version]
+        minor = ".".join(version.split(".")[:2])
         for key, doc in data["groups"][info["group"]].items():
             uses.setdefault(doc, {}).setdefault(key, []).append(version)
+            latest_versions.setdefault(key, {}).setdefault(minor, version)
     for doc, methods in uses.items():
         catalog.add(doc, auto_comments=[
-            f"turtle.{key} (Python {_version_ranges(versions)})"
+            f"turtle.{key} (Python {_comment_version_ranges(versions, latest_versions[key])})"
             for key, versions in methods.items()
         ])
     return catalog
@@ -128,7 +150,8 @@ def _module_name(lang, group):
 def _render_shim(lang, data):
     transitions = []
     previous = None
-    for version, info in data["versions"].items():
+    for version in sorted(data["versions"], key=lambda value: tuple(map(int, value.split(".")))):
+        info = data["versions"][version]
         group = info["group"]
         if group != previous:
             transitions.append((tuple(map(int, version.split("."))), group))
@@ -137,7 +160,7 @@ def _render_shim(lang, data):
     for index, (version, group) in enumerate(reversed(transitions[1:])):
         keyword = "if" if index == 0 else "elif"
         lines.extend([
-            f"{keyword} sys.version_info[:2] >= {version!r}:",
+            f"{keyword} sys.version_info[:3] >= {version!r}:",
             f"    from turtle_translations.{_module_name(lang, group)} import docsdict as docsdict",
         ])
     fallback = f"from turtle_translations.{_module_name(lang, transitions[0][1])} import docsdict as docsdict"
@@ -210,7 +233,7 @@ def main(argv=None):
 
     p = sub.add_parser("extract", help="write the union template `po/turtle.pot`")
     p.add_argument("--cpython", type=Path,
-                   help="refresh source mappings from a CPython checkout's upstream refs")
+                   help="refresh mappings from local stable tags and upstream development refs")
     p.set_defaults(func=cmd_extract)
 
     p = sub.add_parser("init", help="create a PO file for a new language")

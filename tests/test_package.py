@@ -40,8 +40,11 @@ class PackageTests(unittest.TestCase):
                 names = archive.namelist()
                 self.assertIn("turtle_docstringdict_pl.py", names)
                 self.assertNotIn("turtle_translations/pl.py", names)
-                for group in (311, 312, 313, 314):
-                    self.assertIn(f"turtle_translations/pl/py{group}.py", names)
+                self.assertEqual(
+                    {name for name in names if name.startswith("turtle_translations/pl/py")},
+                    {f"turtle_translations/pl/py{group}.py"
+                     for group in (3110, 3113, 3120, 3126, 3130, 31310, 3140, 3141)},
+                )
             runtime = root / "runtime"
             runtime.mkdir()
             (runtime / "turtle.cfg").write_text("language = pl\n")

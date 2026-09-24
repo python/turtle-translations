@@ -1,6 +1,7 @@
 """Hatchling build hook to compile the PO catalogs when the wheel is built."""
 
 import sys
+import tempfile
 from pathlib import Path
 
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
@@ -11,7 +12,10 @@ import i18n
 
 class CustomBuildHook(BuildHookInterface):
     def initialize(self, version, build_data):
-        # The generated modules are gitignored, so hatch need to be told to ship them.
-        build_data["artifacts"] = [
-            str(path.relative_to(self.root)) for path in i18n._compile_catalogs()
-        ]
+        self.generated = tempfile.TemporaryDirectory()
+        output = Path(self.generated.name)
+        for path in i18n._compile_catalogs(output):
+            build_data["force_include"][str(path)] = path.relative_to(output).as_posix()
+
+    def finalize(self, version, build_data, artifact_path):
+        self.generated.cleanup()

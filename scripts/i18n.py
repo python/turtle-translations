@@ -1,63 +1,90 @@
 """Tooling for maintaining the turtle docstring catalogs."""
 
 import argparse
-import platform
 from datetime import datetime, timezone
+from io import BytesIO
 from pathlib import Path
 
 from babel.messages.catalog import Catalog
 from babel.messages.pofile import read_po, write_po
 
+from sources import read_sources, refresh_sources
+
 ROOT = Path(__file__).resolve().parent.parent
 PO_DIR = ROOT / "po"
-PACKAGE_DIR = ROOT / "turtle_translations"
 POT = PO_DIR / "turtle.pot"
 PROJECT = "turtle-translations"
 BUGS_ADDRESS = "https://github.com/python/turtle-translations/issues"
 
 
+def _version_ranges(versions):
+    versions = sorted(tuple(map(int, version.split("."))) for version in versions)
+    ranges = []
+    for version in versions:
+        if ranges:
+            previous = ranges[-1][1]
+            consecutive = (version[:-1] == previous[:-1]
+                           and version[-1] == previous[-1] + 1)
+            # A general minor label also joins patch zero of the next series.
+            next_series = (len(previous) == 2
+                           and version == (previous[0], previous[1] + 1, 0))
+            if consecutive or next_series:
+                ranges[-1][1] = version
+                continue
+        ranges.append([version, version])
+    labels = []
+    for first, last in ranges:
+        start, end = (".".join(map(str, version)) for version in (first, last))
+        labels.append(start if start == end else f"{start}–{end}")
+    return ", ".join(labels)
 
-def _extract_docstrings():
-    # XXX: turtle.write_docstringdict() only extracts a subset of docstrings and
-    #  appends a newline to every docstring.
-    import turtle
 
-    skip = set(turtle._alias_list) | {"Pen", "RawPen", "done"}
-    result = {}
-    for name in turtle.__all__:
-        if name in skip:
-            continue
-        if name in turtle._tg_screen_functions:
-            key = f"_Screen.{name}"
-        elif name in turtle._tg_turtle_functions:
-            key = f"Turtle.{name}"
-        else:
-            key = name
-        result[key] = eval(key, vars(turtle)).__doc__
-    return dict(sorted(result.items()))
+def _comment_version_ranges(versions, latest_versions):
+    """Qualify only older variants of a method within the same minor series."""
+    labels = set()
+    for version in versions:
+        minor = ".".join(version.split(".")[:2])
+        labels.add(minor if latest_versions[minor] in versions else version)
+    return _version_ranges(labels)
 
 
-def build_template():
+def build_template(data=None):
+    if data is None:
+        data = read_sources()
+    versions = sorted(data["versions"], key=lambda version: tuple(map(int, version.split("."))))
     catalog = Catalog(
         project=PROJECT,
-        version=platform.python_version(),
+        version=f"{versions[0]}–{versions[-1]}",
         msgid_bugs_address=BUGS_ADDRESS,
         charset="utf-8",
         header_comment=(
             "# Docstrings of the Python turtle module.\n"
-            f"# Extracted from Python {platform.python_version()}.\n"
+            f"# Extracted from Python {versions[0]}–{versions[-1]}.\n"
             "# This file was generated via 'scripts/i18n.py extract'."
         ),
     )
-    for key, doc in _extract_docstrings().items():
-        catalog.add(doc, auto_comments=[f"turtle.{key}"])
+    uses = {}
+    latest_versions = {}
+    for version in reversed(versions):
+        info = data["versions"][version]
+        minor = ".".join(version.split(".")[:2])
+        for key, doc in data["groups"][info["group"]].items():
+            uses.setdefault(doc, {}).setdefault(key, []).append(version)
+            latest_versions.setdefault(key, {}).setdefault(minor, version)
+    for doc, methods in uses.items():
+        catalog.add(doc, auto_comments=[
+            f"turtle.{key} (Python {_comment_version_ranges(versions, latest_versions[key])})"
+            for key, versions in methods.items()
+        ])
     return catalog
 
 
 def write_catalog(catalog, path, **kwargs):
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("wb") as f:
-        write_po(f, catalog, width=None, **kwargs)
+    buffer = BytesIO()
+    write_po(buffer, catalog, width=None, **kwargs)
+    # avoid double newline at the end of file
+    path.write_bytes(buffer.getvalue().rstrip() + b"\n")
 
 
 def read_catalog(path, **kwargs):
@@ -66,10 +93,11 @@ def read_catalog(path, **kwargs):
 
 
 def cmd_extract(args):
-    catalog = build_template()
+    data = refresh_sources(args.cpython) if args.cpython else read_sources()
+    catalog = build_template(data)
     write_catalog(catalog, POT)
-    print(f"{POT.relative_to(ROOT)}: {len(catalog)} docstrings "
-          f"from Python {platform.python_version()}")
+    print(f"{POT.relative_to(ROOT)}: {len(catalog)} distinct docstrings "
+          f"from Python {catalog.version}")
 
 
 def po_files(langs=None):
@@ -105,27 +133,70 @@ def cmd_update(args):
         print(f"Updated: {path.relative_to(ROOT)}")
 
 
-def _load_docsdict(path):
+def _load_docsdict(path, docs):
     catalog = read_catalog(path)
-    return {
-        comment.removeprefix("turtle."): message.string
-        for message in catalog
-        if message.id and message.string and not message.fuzzy
-        for comment in message.auto_comments
-    }
+    result = {}
+    for key, original in docs.items():
+        message = catalog.get(original)
+        if message is not None and message.string and not message.fuzzy:
+            result[key] = message.string
+    return result
 
 
-def _compile_catalogs():
+def _module_name(lang, group):
+    return f"{lang}.py{group.replace('.', '')}"
+
+
+def _render_shim(lang, data):
+    transitions = []
+    previous = None
+    for version in sorted(data["versions"], key=lambda value: tuple(map(int, value.split(".")))):
+        info = data["versions"][version]
+        group = info["group"]
+        if group != previous:
+            transitions.append((tuple(map(int, version.split("."))), group))
+        previous = group
+    lines = ["# Generated by scripts/i18n.py. Do not edit.", "", "import sys", ""]
+    for index, (version, group) in enumerate(reversed(transitions[1:])):
+        keyword = "if" if index == 0 else "elif"
+        lines.extend([
+            f"{keyword} sys.version_info[:3] >= {version!r}:",
+            f"    from turtle_translations.{_module_name(lang, group)} import docsdict as docsdict",
+        ])
+    fallback = f"from turtle_translations.{_module_name(lang, transitions[0][1])} import docsdict as docsdict"
+    if len(transitions) > 1:
+        lines.extend(["else:", f"    {fallback}"])
+    else:
+        lines.append(fallback)
+    return "\n".join(lines) + "\n"
+
+
+def _compile_catalogs(output_dir=None):
+    output_dir = ROOT if output_dir is None else Path(output_dir)
+    package_dir = output_dir / "turtle_translations"
+    package_dir.mkdir(parents=True, exist_ok=True)
+    data = read_sources()
     written = []
     for path in po_files():
         # turtle lowercases the language before importing it!
-        target = PACKAGE_DIR / f"{path.stem.lower()}.py"
-        lines = [f"# Generated from {path.name}.", "", "docsdict = {"]
-        for key, doc in sorted(_load_docsdict(path).items()):
-            lines.append(f"    {key!r}: {doc!r},")
-        lines.append("}")
-        target.write_text("\n".join(lines) + "\n", encoding="utf-8")
-        written.append(target)
+        lang = path.stem.lower()
+        for group, docs in data["groups"].items():
+            target = package_dir / lang / f"py{group.replace('.', '')}.py"
+            target.parent.mkdir(parents=True, exist_ok=True)
+            lines = [f"# Generated from {path.name} for Python {group}.", "", "docsdict = {"]
+            for key, doc in sorted(_load_docsdict(path, docs).items()):
+                lines.append(f"    {key!r}: {doc!r},")
+            lines.append("}")
+            target.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            written.append(target)
+        package_init = package_dir / lang / "__init__.py"
+        package_init.write_text(
+            f"# Generated package for {path.name}.\n", encoding="utf-8"
+        )
+        written.append(package_init)
+        shim = output_dir / f"turtle_docstringdict_{lang}.py"
+        shim.write_text(_render_shim(lang, data), encoding="utf-8")
+        written.append(shim)
     return written
 
 
@@ -160,7 +231,10 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
 
-    sub.add_parser("extract", help="write `po/turtle.pot`").set_defaults(func=cmd_extract)
+    p = sub.add_parser("extract", help="write the union template `po/turtle.pot`")
+    p.add_argument("--cpython", type=Path,
+                   help="refresh mappings from local stable tags and upstream development refs")
+    p.set_defaults(func=cmd_extract)
 
     p = sub.add_parser("init", help="create a PO file for a new language")
     p.add_argument("lang", help="language code, e.g. `pl`")

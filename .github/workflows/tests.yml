@@ -1,0 +1,55 @@
+name: Tests
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13", "3.14", "3.15", "3.16"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        if: matrix.python != '3.16'
+        with:
+          python-version: ${{ matrix.python }}
+          allow-prereleases: true
+      # Build the recorded development snapshot before 3.16 has binary releases.
+      - name: Read Python 3.16 source revision
+        if: matrix.python == '3.16'
+        id: source
+        run: |
+          python3 -c 'import json; print("ref=" + json.load(open("sources/turtle.json"))["versions"]["3.16.0"]["commit"])' >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: matrix.python == '3.16'
+        with:
+          repository: python/cpython
+          ref: ${{ steps.source.outputs.ref }}
+          path: .cpython
+          persist-credentials: false
+      - name: Build Python 3.16
+        if: matrix.python == '3.16'
+        working-directory: .cpython
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tk-dev
+          ./configure --prefix="$RUNNER_TEMP/turtle-python"
+          make -j2
+          make install
+          echo "$RUNNER_TEMP/turtle-python/bin" >> "$GITHUB_PATH"
+      - name: Install package and test dependencies
+        run: python3 -m pip install . babel hatchling
+      - name: Test catalogs, extraction, and turtle integration
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify installed shim outside the checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          python3 -I -c 'import sys, turtle_docstringdict_pl as pl; assert isinstance(pl.docsdict, dict); assert "tkinter" not in sys.modules; assert "babel" not in sys.modules'
+          python3 -I -c 'import turtle_translations; assert "pl" in turtle_translations.available()'

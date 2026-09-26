@@ -10,7 +10,6 @@ from babel.messages.pofile import read_po, write_po
 
 ROOT = Path(__file__).resolve().parent.parent
 PO_DIR = ROOT / "po"
-PACKAGE_DIR = ROOT / "turtle_translations"
 POT = PO_DIR / "turtle.pot"
 PROJECT = "turtle-translations"
 BUGS_ADDRESS = "https://github.com/python/turtle-translations/issues"
@@ -115,16 +114,38 @@ def _load_docsdict(path):
     }
 
 
-def _compile_catalogs():
+MODULE_FOOTER = """
+# turtle imports this module after defining its classes, so drop entries for
+# names this version of turtle does not have.
+import turtle
+
+for _key in list(docsdict):
+    _obj = turtle
+    for _attr in _key.split("."):
+        _obj = getattr(_obj, _attr, None)
+    if _obj is None:
+        del docsdict[_key]
+"""
+
+
+def _render_module(source, docsdict):
+    lines = [f"# Generated from {source.name}. Do not edit.",
+             "",
+             "docsdict = {"
+            ]
+    for key, doc in sorted(docsdict.items()):
+        lines.append(f"    {key!r}: {doc!r},")
+    lines.append("}")
+    return "\n".join(lines) + "\n" + MODULE_FOOTER
+
+
+def _compile_catalogs(output_dir=ROOT):
+    """Write a `turtle_docstringdict_<lang>.py` module for each PO file."""
     written = []
     for path in po_files():
         # turtle lowercases the language before importing it!
-        target = PACKAGE_DIR / f"{path.stem.lower()}.py"
-        lines = [f"# Generated from {path.name}.", "", "docsdict = {"]
-        for key, doc in sorted(_load_docsdict(path).items()):
-            lines.append(f"    {key!r}: {doc!r},")
-        lines.append("}")
-        target.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        target = Path(output_dir) / f"turtle_docstringdict_{path.stem.lower()}.py"
+        target.write_text(_render_module(path, _load_docsdict(path)), encoding="utf-8")
         written.append(target)
     return written
 

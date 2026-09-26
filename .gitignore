@@ -1,6 +1,5 @@
 # Compiled from po/*.po
-/turtle_translations/*.py
-!/turtle_translations/__init__.py
+/turtle_docstringdict_*.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

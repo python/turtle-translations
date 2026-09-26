@@ -52,12 +52,16 @@ pl           42/103 translated (40%), 3 fuzzy
 
 ### Compiling
 
-Each PO file compiles to a `turtle_translations/<lang>.py` module containing a
-`docsdict`, which is what `turtle` loads. The generated modules are built
-automatically when the wheel is built, so you normally only need this to test
-locally:
+Each PO file compiles to a top-level `turtle_docstringdict_<lang>.py` module
+containing a `docsdict`, which is what `turtle` imports. Untranslated and fuzzy
+entries are left out so their help stays English. When imported, the module drops
+entries for names that do not exist in the running version of `turtle`, so a
+single module built from the newest Python works on older ones too.
+
+The modules are built automatically when the wheel is built, so you normally
+only need this to test locally:
 
 ```console
 $ python scripts/i18n.py compile
-Compiled: turtle_translations/pl.py
+Compiled: turtle_docstringdict_pl.py
 ```

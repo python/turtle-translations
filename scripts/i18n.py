@@ -116,7 +116,7 @@ def _load_docsdict(path):
 
 MODULE_FOOTER = """
 # turtle imports this module after defining its classes, so drop entries for
-# names this version of turtle does not have.
+# names this version of turtle does not have to avoid stdout reports.
 import turtle
 
 for _key in list(docsdict):
@@ -129,7 +129,7 @@ for _key in list(docsdict):
 
 
 def _render_module(source, docsdict):
-    lines = [f"# Generated from {source.name}. Do not edit.",
+    lines = [f"# Generated from {source.name}.",
              "",
              "docsdict = {"
             ]

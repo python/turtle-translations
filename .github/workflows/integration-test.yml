@@ -52,6 +52,9 @@ jobs:
               if "turtle.Turtle.forward" in message.auto_comments:
                   message.string = "Movu la testudon antaŭen."
                   break
+          # A nonexistent name to check it is dropped at import.
+          catalog.add("Not a real docstring.", "Ne vera dokumentaĵo.",
+                      auto_comments=["turtle.Turtle.nonexistent"])
           i18n.write_catalog(catalog, path)
           PY
           python scripts/i18n.py stats
@@ -77,5 +80,9 @@ jobs:
           assert turtle.Turtle.forward.__doc__ == "Movu la testudon antaŭen."
           assert turtle.forward.__doc__ == "Movu la testudon antaŭen."
           assert "Move the turtle backward" in turtle.back.__doc__
+
+          import turtle_docstringdict_eo
+          assert "Turtle.nonexistent" not in turtle_docstringdict_eo.docsdict
+          assert not hasattr(turtle.Turtle, "nonexistent")
           PY
           python check.py

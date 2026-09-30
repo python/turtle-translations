@@ -12,9 +12,10 @@ import i18n
 
 class CustomBuildHook(BuildHookInterface):
     def initialize(self, version, build_data):
-        self._build_dir = tempfile.TemporaryDirectory()
-        for path in i18n._compile_catalogs(self._build_dir.name):
-            build_data["force_include"][str(path)] = path.name
+        self.generated = tempfile.TemporaryDirectory()
+        output = Path(self.generated.name)
+        for path in i18n._compile_catalogs(output):
+            build_data["force_include"][str(path)] = path.relative_to(output).as_posix()
 
     def finalize(self, version, build_data, artifact_path):
-        self._build_dir.cleanup()
+        self.generated.cleanup()

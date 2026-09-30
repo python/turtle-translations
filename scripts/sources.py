@@ -1,0 +1,179 @@
+"""Extract versioned English turtle docstrings without importing turtle."""
+
+import ast
+import json
+import re
+import subprocess
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SOURCES = ROOT / "sources" / "turtle.json"
+REPORT = ROOT / "sources" / "README.md"
+SERIES = tuple(f"3.{minor}" for minor in range(11, 17))
+DEVELOPMENT_REFS = {"3.15": "upstream/3.15", "3.16": "upstream/main"}
+
+
+def normalize_docstring(doc):
+    """Match CPython's indentation cleanup, retaining leading/trailing blank lines."""
+    lines = doc.expandtabs().split("\n")
+    margin = min((len(line) - len(line.lstrip(" ")) for line in lines[1:]
+                  if line.strip(" ")), default=0)
+    return "\n".join([lines[0].lstrip(" ")]
+                     + [line[min(margin, len(line) - len(line.lstrip(" "))):]
+                        for line in lines[1:]])
+
+
+def extract_docstrings(source):
+    """Resolve public names, inherited methods, and simple method aliases."""
+    tree = ast.parse(source)
+    classes = {node.name: node for node in tree.body if isinstance(node, ast.ClassDef)}
+    objects = {node.name: ast.get_docstring(node, clean=False)
+               for node in tree.body
+               if isinstance(node, (ast.ClassDef, ast.FunctionDef))}
+    values = {}
+
+    def literal(node):
+        if isinstance(node, ast.Name):
+            return values[node.id]
+        if isinstance(node, ast.BinOp) and isinstance(node.op, ast.Add):
+            return literal(node.left) + literal(node.right)
+        return ast.literal_eval(node)
+
+    for node in tree.body:
+        if isinstance(node, ast.Assign):
+            try:
+                value = literal(node.value)
+            except (ValueError, KeyError, TypeError):
+                continue
+            for target in node.targets:
+                if isinstance(target, ast.Name):
+                    values[target.id] = value
+
+    def methods(name):
+        result = {}
+        # Earlier bases take precedence in turtle's simple inheritance trees.
+        for base in reversed(classes[name].bases):
+            if isinstance(base, ast.Name) and base.id in classes:
+                result.update(methods(base.id))
+        for node in classes[name].body:
+            if isinstance(node, ast.FunctionDef):
+                result[node.name] = ast.get_docstring(node, clean=False)
+            elif isinstance(node, ast.Assign) and isinstance(node.value, ast.Name):
+                if node.value.id in result:
+                    for target in node.targets:
+                        if isinstance(target, ast.Name):
+                            result[target.id] = result[node.value.id]
+        return result
+
+    screen = methods("_Screen")
+    turtle = methods("Turtle")
+    skip = set(values["_alias_list"]) | {"Pen", "RawPen", "done"}
+    result = {}
+    for name in values["__all__"]:
+        if name in skip:
+            continue
+        if name in values["_tg_screen_functions"]:
+            key, doc = f"_Screen.{name}", screen[name]
+        elif name in values["_tg_turtle_functions"]:
+            key, doc = f"Turtle.{name}", turtle[name]
+        else:
+            key, doc = name, objects[name]
+        if doc:
+            result[key] = normalize_docstring(doc)
+    return dict(sorted(result.items()))
+
+
+def read_sources(path=SOURCES):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def collect_sources(checkout):
+    def git(*args):
+        return subprocess.check_output(
+            ["git", "-C", str(checkout), *args], text=True, encoding="utf-8"
+        )
+
+    refs = {}
+    tags = git("tag", "--list", "v3.*").splitlines()
+    for series in SERIES:
+        releases = sorted(
+            (tag for tag in tags if re.fullmatch(rf"v{re.escape(series)}\.\d+", tag)),
+            key=lambda tag: int(tag.rsplit(".", 1)[1]),
+        )
+        if releases:
+            patches = [int(tag.rsplit(".", 1)[1]) for tag in releases]
+            if patches != list(range(patches[-1] + 1)):
+                raise ValueError(f"Incomplete release tags for Python {series}; fetch upstream tags")
+            refs.update((tag[1:], tag) for tag in releases)
+        elif series in DEVELOPMENT_REFS:
+            refs[f"{series}.0"] = DEVELOPMENT_REFS[series]
+        else:
+            raise ValueError(f"No release tags for Python {series}; fetch upstream tags")
+
+    groups = {}
+    versions = {}
+    for version, ref in refs.items():
+        commit = git("rev-parse", f"{ref}^{{commit}}").strip()
+        docs = extract_docstrings(git("show", f"{commit}:Lib/turtle.py"))
+        group = next((key for key, value in groups.items() if value == docs), version)
+        groups[group] = docs
+        versions[version] = {"ref": ref, "commit": commit, "group": group}
+    return {"versions": versions, "groups": groups}
+
+
+def render_report(data):
+    lines = [
+        "# Turtle docstring compatibility", "",
+        "Generated by `python scripts/i18n.py extract --cpython ../cpython`.", "",
+        "All locally available stable release tags are compared within each supported series.",
+        "Series without a stable release use development branch snapshots, recorded as x.y.0;",
+        "prerelease tags are excluded. Python 3.16 uses `upstream/main`.",
+        "Counts refer to public names with docstrings,",
+        "excluding aliases, following the catalog extractor's scope.", "",
+        "Source indentation is normalized using CPython's docstring cleanup convention;",
+        "leading and trailing blank lines are preserved. This avoids translation variants",
+        "caused solely by compiler indentation cleanup in newer Python versions.", "",
+        "| Python | Ref | Commit | Names | Dictionary group |",
+        "| --- | --- | --- | ---: | --- |",
+    ]
+    for version, info in data["versions"].items():
+        docs = data["groups"][info["group"]]
+        lines.append(f"| {version} | `{info['ref']}` | `{info['commit']}` | "
+                     f"{len(docs)} | {info['group']} |")
+    previous = None
+    for version, info in data["versions"].items():
+        docs = data["groups"][info["group"]]
+        if previous is None:
+            lines.extend(["", f"## Python {version}", "", "Baseline."])
+        else:
+            changes = {
+                "Added": sorted(docs.keys() - previous.keys()),
+                "Removed": sorted(previous.keys() - docs.keys()),
+                "Changed": sorted(key for key in docs.keys() & previous.keys()
+                                  if docs[key] != previous[key]),
+            }
+            if any(changes.values()):
+                lines.extend(["", f"## Python {version}", ""])
+            for label, keys in changes.items():
+                if keys:
+                    lines.append(f"- {label}: " + ", ".join(f"`{key}`" for key in keys) + ".")
+        previous = docs
+    lines.extend(["", "Versions without a change section have the same docstrings as the preceding",
+                  "recorded version. Changes are compared after indentation normalization.",
+                  "", "## Updating", "",
+                  "Fetch upstream release tags in the CPython checkout before regenerating.",
+                  "Missing tags within a series are rejected; the newest available local tag",
+                  "determines the end of the analyzed release range.", "",
+                  "`turtle.json` records exact English text and source provenance. Equal snapshots",
+                  "share a dictionary group. Extraction regenerates the union template; run",
+                  "`python scripts/i18n.py update` afterwards to merge it into the language catalogs.",
+                  "Builds use the committed mappings and do not need a CPython checkout.", ""])
+    return "\n".join(lines)
+
+
+def refresh_sources(checkout):
+    data = collect_sources(checkout)
+    SOURCES.parent.mkdir(parents=True, exist_ok=True)
+    SOURCES.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    REPORT.write_text(render_report(data), encoding="utf-8")
+    return data

@@ -99,7 +99,6 @@ Compiled: turtle_translations/pl/py31310.py
 Compiled: turtle_translations/pl/py3140.py
 Compiled: turtle_translations/pl/py3141.py
 Compiled: turtle_translations/pl/__init__.py
-Compiled: turtle_docstringdict_pl.py
 ```
 
 The shim uses `sys.version_info[:3]`:

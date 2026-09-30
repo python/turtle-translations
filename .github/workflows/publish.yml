@@ -2,6 +2,7 @@ name: Upload package
 
 on:
   push:
+    branches: [main]
   pull_request:
   release:
     types:
